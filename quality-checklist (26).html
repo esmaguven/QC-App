@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalite Kontrol — Koluman Otomotiv</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Kalite Kontrol">
+<meta name="application-name" content="Kalite Kontrol">
+<meta name="theme-color" content="#0c1e4a">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
+<style>
+/* ── TOKENS ── */
+:root{
+  --navy:#0c1e4a; --navy2:#1a3272; --blue:#1d4ed8; --accent:#3b82f6;
+  --green:#059669; --red:#dc2626; --amber:#d97706;
+  --bg:#eef2fb; --surface:#fff; --border:#dce4f5;
+  --text:#0f172a; --muted:#64748b;
+  --rad:10px; --shd:0 1px 8px rgba(12,30,74,.09);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+
+/* ── TOPBAR ── */
+#topbar{
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);
+  color:#fff;height:52px;display:flex;align-items:center;
+  justify-content:space-between;padding:0 18px;
+  box-shadow:0 2px 12px rgba(12,30,74,.35);
+  position:sticky;top:0;z-index:300
+}
+.brand{font-weight:800;font-size:.95rem;letter-spacing:.2px;display:flex;align-items:center;gap:8px}
+.nav-desktop{display:flex;gap:2px}
+.ntab{background:none;border:none;color:rgba(255,255,255,.6);padding:5px 11px;border-radius:6px;cursor:pointer;font-size:.79rem;font-weight:500;transition:all .15s;font-family:inherit}
+.ntab:hover{color:#fff;background:rgba(255,255,255,.12)}
+.ntab.on{color:#fff;background:rgba(255,255,255,.2);font-weight:700}
+.hmbg{display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:4px}
+.hmbg span{width:20px;height:2px;background:#fff;border-radius:2px;display:block}
+
+/* ── MOBILE NAV ── */
+#mnav{display:none;position:fixed;top:52px;left:0;right:0;background:var(--navy);z-index:299;flex-direction:column;padding:6px 0;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+#mnav.open{display:flex}
+#mnav button{background:none;border:none;color:rgba(255,255,255,.8);padding:11px 18px;text-align:left;font-size:.88rem;cursor:pointer;font-weight:500;font-family:inherit}
+#mnav button:hover,#mnav button.on{color:#fff;background:rgba(255,255,255,.1)}
+
+/* ── PAGES ── */
+.page{display:none;padding:18px;max-width:880px;margin:0 auto}
+.page.on{display:block}
+
+/* ── LOADING ── */
+#loader{position:fixed;inset:0;background:rgba(12,30,74,.9);z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;color:#fff}
+.spin{width:34px;height:34px;border:3px solid rgba(255,255,255,.2);border-top-color:#fff;border-radius:50%;animation:sp .65s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+
+/* ── TOAST ── */
+#toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(16px);background:var(--navy);color:#fff;padding:9px 18px;border-radius:8px;font-size:.83rem;font-weight:600;opacity:0;transition:all .22s;pointer-events:none;z-index:9998;border-left:3px solid var(--accent);box-shadow:0 4px 18px rgba(0,0,0,.3);max-width:88vw;text-align:center;white-space:pre-wrap}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+#toast.ok{border-left-color:#34d399;background:#064e3b}
+#toast.err{border-left-color:#f87171;background:#7f1d1d}
+#toast.inf{border-left-color:#60a5fa}
+
+/* ── BUTTONS ── */
+.btn{display:inline-flex;align-items:center;gap:5px;padding:7px 13px;border-radius:7px;border:none;cursor:pointer;font-size:.8rem;font-weight:600;transition:all .13s;font-family:inherit;white-space:nowrap}
+.btn:active{transform:scale(.96)}
+.btn-primary{background:var(--blue);color:#fff}.btn-primary:hover{background:#1e40af}
+.btn-success{background:var(--green);color:#fff}.btn-success:hover{background:#047857}
+.btn-danger{background:var(--red);color:#fff}.btn-danger:hover{background:#b91c1c}
+.btn-amber{background:var(--amber);color:#fff}.btn-amber:hover{background:#b45309}
+.btn-ghost{background:transparent;color:var(--muted);border:1px solid var(--border)}.btn-ghost:hover{background:var(--bg)}
+.btn-navy{background:var(--navy);color:#fff}.btn-navy:hover{background:var(--navy2)}
+.sm{padding:4px 9px;font-size:.74rem}
+
+/* ── FORMS ── */
+.fg{margin-bottom:13px}
+.fg label{display:block;font-size:.77rem;font-weight:700;color:var(--navy);margin-bottom:4px}
+.fg input,.fg textarea,.fg select{width:100%;padding:8px 10px;border:1.5px solid var(--border);border-radius:7px;font-size:.85rem;background:#fff;color:var(--text);transition:border-color .13s;font-family:inherit}
+.fg input:focus,.fg textarea:focus,.fg select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.12)}
+.fg textarea{resize:vertical;min-height:56px}
+.fg select{cursor:pointer}
+
+/* ── MODALS ── */
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:500;display:none;align-items:center;justify-content:center;padding:14px}
+.ov.open{display:flex}
+.modal{background:#fff;border-radius:12px;width:100%;max-width:500px;max-height:92vh;overflow-y:auto;box-shadow:0 18px 56px rgba(0,0,0,.28)}
+.mhdr{padding:13px 17px;background:var(--navy);border-radius:12px 12px 0 0;color:#fff;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0}
+.mhdr h3{font-size:.9rem;font-weight:700}
+.mclose{background:none;border:none;color:rgba(255,255,255,.65);font-size:1.4rem;cursor:pointer;line-height:1;padding:0 3px}.mclose:hover{color:#fff}
+.mbdy{padding:17px}
+.mfoot{padding:11px 17px;border-top:1px solid var(--border);display:flex;gap:7px;justify-content:flex-end}
+
+/* ── BADGE ── */
+.badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:.7rem;font-weight:700}
+.b-final{background:#d1fae5;color:#065f46}
+.b-draft{background:#fef3c7;color:#92400e}
+.b-empty{background:#fef9c3;color:#854d0e}
+
+/* ── CARD ── */
+.card{background:var(--surface);border-radius:var(--rad);border:1px solid var(--border);box-shadow:var(--shd);padding:14px}
+
+/* ── DASHBOARD ── */
+.hero{background:linear-gradient(135deg,var(--navy),var(--navy2) 55%,var(--blue));border-radius:12px;padding:24px 20px;color:#fff;margin-bottom:16px;overflow:hidden;position:relative}
+.hero::after{content:'';position:absolute;right:-40px;top:-40px;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.04)}
+.hero h1{font-size:1.35rem;font-weight:900;margin-bottom:3px}
+.hero p{opacity:.7;font-size:.83rem;margin-bottom:14px}
+.sgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px}
+.scard{background:#fff;border-radius:var(--rad);border:1px solid var(--border);padding:12px 14px;text-align:center;box-shadow:var(--shd)}
+.snum{font-size:1.65rem;font-weight:900;color:var(--navy)}
+.slbl{font-size:.68rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-top:2px}
+
+/* ── LIST ITEMS ── */
+.li{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 13px;border-radius:8px;border:1px solid var(--border);background:#fff;margin-bottom:7px;box-shadow:var(--shd)}
+.li:hover{border-color:var(--accent)}
+.li-i{flex:1;min-width:0}
+.li-n{font-weight:700;font-size:.85rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.li-m{font-size:.72rem;color:var(--muted);margin-top:2px}
+.li-a{display:flex;gap:5px;flex-shrink:0}
+
+/* ── ACCORDION GROUPS ── */
+.acc-wrap{border:1px solid var(--border);border-radius:var(--rad);overflow:hidden;margin-bottom:10px;background:#fff;box-shadow:var(--shd)}
+.acc-hdr{padding:11px 14px;background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:8px;user-select:none}
+.acc-hdr:hover{opacity:.93}
+.acc-chev{font-size:.75rem;transition:transform .2s;display:inline-block;margin-right:6px}
+.acc-chev.open{transform:rotate(90deg)}
+.acc-body{padding:8px;display:none}
+.acc-body.open{display:block}
+
+/* ── TEMPLATE ROWS ── */
+.tmpl-li{border:1px solid var(--border);border-radius:7px;background:#fafbff;padding:9px 11px;margin-bottom:5px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.tmpl-li:hover{border-color:var(--accent);background:#eff6ff}
+
+/* ── DRAG ── */
+.drow{display:flex;align-items:center;gap:7px;padding:7px 9px;border:1.5px solid var(--border);border-radius:7px;background:#fff;margin-bottom:5px}
+.drow.heading{background:#eef3ff;border-color:#c7d6f5}
+.drow.heading input{font-weight:700;color:var(--navy)}
+.drow.dragging{opacity:.35}
+.dhandle{cursor:grab;color:var(--muted);flex-shrink:0;user-select:none;font-size:1rem}.dhandle:active{cursor:grabbing}
+
+/* ── OPERATOR CHIPS ── */
+#chip-wrap{min-height:38px;padding:6px 8px;border:1.5px solid var(--border);border-radius:7px;cursor:pointer;display:flex;flex-wrap:wrap;gap:5px;background:#fff;align-items:center}
+#chip-wrap:hover{border-color:var(--accent)}
+.chip{display:inline-flex;align-items:center;gap:3px;background:var(--navy);color:#fff;padding:3px 8px;border-radius:12px;font-size:.73rem;font-weight:600}
+.chip-rm{background:none;border:none;color:rgba(255,255,255,.65);cursor:pointer;font-size:.9rem;line-height:1;padding:0}.chip-rm:hover{color:#fff}
+#op-dd{display:none;border:1.5px solid var(--accent);border-radius:8px;background:#fff;box-shadow:0 6px 20px rgba(12,30,74,.15);max-height:210px;overflow-y:auto;margin-top:3px;position:relative;z-index:50}
+#op-dd li{list-style:none;padding:8px 11px;cursor:pointer;font-size:.82rem;display:flex;justify-content:space-between;align-items:center}
+#op-dd li:hover{background:#f0f6ff}
+#op-dd li.sel{background:#dbeafe;color:#1e40af;font-weight:700}
+
+/* ── FILL BANNER ── */
+#fill-banner{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;border-radius:var(--rad);padding:11px 15px;margin-bottom:14px;display:none}
+.bnr-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.bnr-info .bnr-title{font-weight:800;font-size:.88rem}
+.bnr-info .bnr-sub{opacity:.75;font-size:.74rem;margin-top:1px}
+.pbar-wrap{background:rgba(255,255,255,.2);border-radius:4px;height:4px;width:120px;overflow:hidden;margin-top:5px}
+.pbar{background:#34d399;height:100%;width:0;transition:width .3s;border-radius:4px}
+.pbar-txt{font-size:.69rem;opacity:.7;margin-top:2px}
+.bnr-btns{display:flex;gap:5px;flex-wrap:wrap}
+
+/* ── FILL ITEMS ── */
+.fill-sec{background:#fff;border-radius:var(--rad);border:1px solid var(--border);padding:13px;margin-bottom:9px;box-shadow:var(--shd)}
+.fheading{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:7px 12px;border-radius:7px;font-weight:700;font-size:.82rem;margin:10px 0 6px}
+.fitem{border:1.5px solid var(--border);border-radius:8px;padding:10px 12px;margin-bottom:8px;transition:border-color .15s,background .15s}
+.fitem.ok{border-color:var(--green);background:#f0fdf4}
+.fitem.nok{border-color:var(--red);background:#fff5f5}
+.fitem.dev{border-color:var(--amber);background:#fffbeb}
+.fitem.bad{border-color:var(--red)!important;background:#fff5f5!important;animation:shk .3s}
+@keyframes shk{0%,100%{transform:translateX(0)}25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+.fitem-hdr{display:flex;gap:7px;align-items:flex-start;margin-bottom:8px}
+.fitem-n{font-weight:900;color:var(--navy);font-size:.85rem;flex-shrink:0;min-width:22px}
+.fitem-t{font-size:.85rem;font-weight:600;line-height:1.4}
+.rg{display:flex;gap:7px;flex-wrap:wrap}
+.ropt{padding:5px 11px;border-radius:6px;border:1.5px solid var(--border);cursor:pointer;font-size:.76rem;font-weight:600;transition:all .12s;user-select:none}
+.ropt:hover{border-color:var(--accent);background:#f0f6ff}
+.ropt input{display:none}
+.r-ok{background:#d1fae5;border-color:var(--green)!important;color:#065f46}
+.r-nok{background:#fee2e2;border-color:var(--red)!important;color:#991b1b}
+.r-dev{background:#fef3c7;border-color:var(--amber)!important;color:#92400e}
+.reason{margin-top:8px}
+.reason label{font-size:.73rem;font-weight:700;color:var(--red);display:block;margin-bottom:3px}
+
+/* ── SESSIONS ── */
+.combo{border:1px solid var(--border);border-radius:var(--rad);overflow:hidden;margin-bottom:10px;box-shadow:var(--shd)}
+.combo-hdr{padding:11px 14px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;user-select:none;color:#fff}
+.chdr-ok{background:linear-gradient(135deg,#065f46,#059669)}
+.chdr-warn{background:linear-gradient(135deg,#7f1d1d,#dc2626)}
+.chdr-part{background:linear-gradient(135deg,var(--navy),var(--navy2))}
+.combo-body{padding:8px;background:#fff;display:none}
+.combo-body.open{display:block}
+.tblock{border:1px solid var(--border);border-radius:7px;margin-bottom:6px;overflow:hidden}
+.tblock-hdr{padding:8px 11px;background:#f5f7fc;display:flex;align-items:center;justify-content:space-between;gap:8px;font-weight:700;font-size:.81rem}
+.tblock-body{padding:6px 7px}
+.srow{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:6px 8px;border:1px solid var(--border);border-radius:6px;margin-bottom:4px;background:#fff;flex-wrap:wrap}
+.srow:last-child{margin-bottom:0}
+
+/* ── FILTER BAR ── */
+.fbar{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap;align-items:center}
+.fbtn{padding:5px 12px;border-radius:20px;border:1.5px solid var(--border);background:#fff;cursor:pointer;font-size:.75rem;font-weight:600;color:var(--muted);transition:all .12s;font-family:inherit}
+.fbtn.on,.fbtn:hover{border-color:var(--accent);color:var(--blue);background:#eff6ff}
+.sinp{flex:1;min-width:150px;padding:6px 11px;border:1.5px solid var(--border);border-radius:20px;font-size:.81rem;background:#fff;font-family:inherit}
+.sinp:focus{outline:none;border-color:var(--accent)}
+
+/* ── VIEW TOGGLE ── */
+.vtog{display:flex;gap:3px;background:#e8edf8;border-radius:8px;padding:3px}
+.vbtn{padding:4px 11px;border-radius:5px;border:none;background:none;cursor:pointer;font-size:.75rem;font-weight:600;color:var(--muted);font-family:inherit}
+.vbtn.on{background:#fff;color:var(--blue);box-shadow:0 1px 4px rgba(0,0,0,.1)}
+
+/* ── PREVIEW TABLE ── */
+.ptbl{width:100%;border-collapse:collapse;font-size:.8rem}
+.ptbl th,.ptbl td{border:1px solid var(--border);padding:6px 8px;text-align:left}
+.ptbl th{background:var(--navy);color:#fff;font-weight:700}
+.ptbl tr:nth-child(even){background:#f8fafc}
+.ptbl .tbl-sec td{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;font-weight:700}
+
+/* ── SCANNER ── */
+#scan-vp{width:100%;min-height:230px;background:#000;overflow:hidden;position:relative}
+#scan-vp video,#scan-vp canvas{width:100%!important;height:auto!important;display:block}
+
+/* ── EMPTY ── */
+.empty{text-align:center;padding:36px 20px;color:var(--muted)}
+.empty-ico{font-size:2.4rem;margin-bottom:8px}
+.empty p{font-size:.84rem}
+
+/* ── PAGE HEADER ── */
+.phdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:15px;gap:10px}
+.ptitle{font-size:1.02rem;font-weight:800;color:var(--navy)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:640px){
+  .nav-desktop{display:none}.hmbg{display:flex}
+  .sgrid{grid-template-columns:repeat(2,1fr)}
+  .page{padding:12px}
+  .bnr-inner{flex-direction:column;align-items:flex-start}
+  .modal{max-width:100%}
+  .rg{flex-direction:column}
+  .srow{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<!-- LOADING -->
+<div id="loader">
+  <div class="spin"></div>
+  <div style="font-size:.86rem;opacity:.8">Veriler yükleniyor...</div>
+</div>
+
+<!-- TOAST -->
+<div id="toast"></div>
+
+<!-- TOPBAR -->
+<div id="topbar">
+  <div class="brand">
+    <button class="hmbg" id="hmbg-btn" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+    <img src="data:image/png;base64,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" style="width:28px;height:28px;object-fit:contain;flex-shrink:0" alt="logo">
+    Kalite Kontrol
+  </div>
+  <nav class="nav-desktop">
+    <button class="ntab on" data-pg="dash"      onclick="goto('dash')">Ana Sayfa</button>
+    <button class="ntab"    data-pg="groups"     onclick="goto('groups')">Gruplar</button>
+    <button class="ntab"    data-pg="templates"  onclick="goto('templates')">Şablonlar</button>
+    <button class="ntab"    data-pg="operators"  onclick="goto('operators')">Operatörler</button>
+    <button class="ntab"    data-pg="fill"       onclick="goto('fill')">Doldur</button>
+    <button class="ntab"    data-pg="sessions"   onclick="goto('sessions')">Kayıtlar</button>
+  </nav>
+</div>
+
+<!-- MOBILE NAV -->
+<div id="mnav">
+  <button data-pg="dash"     onclick="goto('dash');closeMenu()">🏠 Ana Sayfa</button>
+  <button data-pg="groups"   onclick="goto('groups');closeMenu()">📁 Gruplar</button>
+  <button data-pg="templates"onclick="goto('templates');closeMenu()">📋 Şablonlar</button>
+  <button data-pg="operators"onclick="goto('operators');closeMenu()">👷 Operatörler</button>
+  <button data-pg="fill"     onclick="goto('fill');closeMenu()">✏️ Doldur</button>
+  <button data-pg="sessions" onclick="goto('sessions');closeMenu()">📂 Kayıtlar</button>
+</div>
+
+<!-- ═══════════════════════ PAGES ═══════════════════════ -->
+
+<!-- DASHBOARD -->
+<div id="pg-dash" class="page on">
+  <div class="hero">
+    <h1>⚙️ Kalite Kontrol Sistemi</h1>
+    <p>Koluman Otomotiv Endüstri A.Ş.</p>
+    <button class="btn btn-success" onclick="goto('fill')">✏️ Yeni Kontrol Başlat</button>
+  </div>
+  <div class="sgrid">
+    <div class="scard"><div class="snum" id="st-all">—</div><div class="slbl">Toplam</div></div>
+    <div class="scard"><div class="snum" id="st-fin" style="color:var(--green)">—</div><div class="slbl">Tamamlanan</div></div>
+    <div class="scard"><div class="snum" id="st-dft" style="color:var(--amber)">—</div><div class="slbl">Taslak</div></div>
+    <div class="scard"><div class="snum" id="st-tdy" style="color:var(--blue)">—</div><div class="slbl">Bugün</div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+    <div class="card" style="cursor:pointer" onclick="goto('sessions')">
+      <div style="font-weight:700;font-size:.88rem;color:var(--navy);margin-bottom:9px">📂 Son Kayıtlar</div>
+      <div id="dash-recent" style="font-size:.79rem;color:var(--muted)">Yükleniyor...</div>
+    </div>
+    <div class="card">
+      <div style="font-weight:700;font-size:.88rem;color:var(--navy);margin-bottom:9px">⚡ Hızlı Erişim</div>
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <button class="btn btn-navy" style="justify-content:center" onclick="goto('groups')">📁 Gruplar</button>
+        <button class="btn btn-ghost" style="justify-content:center" onclick="goto('templates')">📋 Şablonlar</button>
+        <button class="btn btn-ghost" style="justify-content:center" onclick="goto('operators')">👷 Operatörler</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GROUPS -->
+<div id="pg-groups" class="page">
+  <div class="phdr">
+    <div class="ptitle">📁 Kontrol Grupları</div>
+    <button class="btn btn-primary sm" onclick="openGM()">+ Yeni Grup</button>
+  </div>
+  <div id="groups-list"></div>
+</div>
+
+<!-- TEMPLATES -->
+<div id="pg-templates" class="page">
+  <div class="phdr">
+    <div class="ptitle">📋 Şablonlar</div>
+    <button class="btn btn-primary sm" onclick="openTM()">+ Yeni Şablon</button>
+  </div>
+  <div id="templates-list"></div>
+</div>
+
+<!-- OPERATORS -->
+<div id="pg-operators" class="page">
+  <div class="phdr">
+    <div class="ptitle">👷 Operatörler</div>
+    <button class="btn btn-primary sm" onclick="openOM()">+ Yeni Operatör</button>
+  </div>
+  <div id="operators-list"></div>
+</div>
+
+<!-- FILL -->
+<div id="pg-fill" class="page">
+  <!-- SELECT SECTION -->
+  <div id="fs-select">
+    <div class="ptitle" style="margin-bottom:14px">✏️ Yeni Kontrol</div>
+
+    <div class="fill-sec">
+      <div class="fg">
+        <label>Kontrol Grubu *</label>
+        <select id="f-grp" onchange="onFGrpChange()">
+          <option value="">— Grup seçin —</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label>Şablon *</label>
+        <select id="f-tmpl" disabled>
+          <option value="">— Önce grup seçin —</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="fill-sec">
+      <div class="fg">
+        <label>Operatör(ler) *</label>
+        <div id="chip-wrap" onclick="toggleOpDD()">
+          <span id="chip-ph" style="color:var(--muted);font-size:.78rem;pointer-events:none">Seçmek için tıklayın...</span>
+        </div>
+        <div id="op-dd-wrap">
+          <ul id="op-dd"></ul>
+        </div>
+      </div>
+      <div class="fg">
+        <label>Şasi Numarası *</label>
+        <div style="display:flex;gap:7px">
+          <input type="text" id="f-chassis" placeholder="NM0LS7F20P1234567" style="text-transform:uppercase;flex:1">
+          <button class="btn btn-navy" onclick="openScanner()" style="flex-shrink:0;font-size:1rem;padding:7px 10px" title="Barkod Tara">📷</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="fill-sec">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <div class="fg"><label>Müşteri / Firma</label><input type="text" id="f-customer" placeholder="opsiyonel"></div>
+        <div class="fg"><label>Sipariş / İş Emri No</label><input type="text" id="f-order" placeholder="opsiyonel"></div>
+        <div class="fg"><label>Kontrol Yeri / İstasyon</label><input type="text" id="f-location" placeholder="opsiyonel"></div>
+        <div class="fg"><label>Genel Not</label><input type="text" id="f-note" placeholder="opsiyonel"></div>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" style="width:100%;justify-content:center;padding:10px;font-size:.88rem" onclick="startFill()">Başla →</button>
+  </div>
+
+  <!-- FORM SECTION -->
+  <div id="fs-form" style="display:none">
+    <div id="fill-banner">
+      <div class="bnr-inner">
+        <div class="bnr-info">
+          <div class="bnr-title" id="bn-tmpl"></div>
+          <div class="bnr-sub"><span id="bn-op"></span> · <span id="bn-ch"></span></div>
+          <div class="pbar-wrap"><div class="pbar" id="pbar"></div></div>
+          <div class="pbar-txt" id="pbar-txt">0 / 0</div>
+        </div>
+        <div class="bnr-btns">
+          <button class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.3)" onclick="cancelFill()">← Geri</button>
+          <button class="btn btn-amber" onclick="saveAsDraft()">📋 Taslak</button>
+          <button class="btn btn-success" onclick="saveAsFinal()">✅ Kaydet</button>
+          <button class="btn btn-primary" onclick="saveAndPDF()">⬇ Kaydet+PDF</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="fill-items"></div>
+
+    <div style="display:flex;gap:7px;justify-content:flex-end;margin-top:14px;padding-bottom:36px;flex-wrap:wrap">
+      <button class="btn btn-ghost" onclick="cancelFill()">← İptal</button>
+      <button class="btn btn-amber" onclick="saveAsDraft()">📋 Taslağa Kaydet</button>
+      <button class="btn btn-success" onclick="saveAsFinal()">✅ Kaydet</button>
+      <button class="btn btn-primary" onclick="saveAndPDF()">⬇ Kaydet & PDF</button>
+    </div>
+  </div>
+</div>
+
+<!-- SESSIONS -->
+<div id="pg-sessions" class="page">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+    <div class="ptitle">📂 Kayıtlar</div>
+    <div class="vtog">
+      <button class="vbtn on" id="vbtn-g" onclick="setView('grouped')">Gruplu</button>
+      <button class="vbtn"    id="vbtn-l" onclick="setView('list')">Liste</button>
+    </div>
+  </div>
+  <div class="fbar">
+    <input type="text" class="sinp" id="srch" placeholder="🔍 Operatör, şasi, şablon..." oninput="renderSessions()">
+    <button class="fbtn on" data-f="all"   onclick="setFilt(this,'all')">Tümü</button>
+    <button class="fbtn"    data-f="final" onclick="setFilt(this,'final')">Kayıtlı</button>
+    <button class="fbtn"    data-f="draft" onclick="setFilt(this,'draft')">Taslak</button>
+  </div>
+  <div id="sessions-list"></div>
+</div>
+
+<!-- ═══════════════════════ MODALS ═══════════════════════ -->
+
+<!-- GROUP MODAL -->
+<div class="ov" id="ov-grp">
+  <div class="modal">
+    <div class="mhdr"><h3 id="gm-title">Yeni Grup</h3><button class="mclose" onclick="closeOv('ov-grp')">×</button></div>
+    <div class="mbdy">
+      <div class="fg"><label>Grup Adı *</label><input type="text" id="gm-name" placeholder="örn. Şase Kontrol"></div>
+      <div class="fg"><label>Açıklama</label><input type="text" id="gm-desc" placeholder="opsiyonel"></div>
+    </div>
+    <div class="mfoot">
+      <button class="btn btn-ghost" onclick="closeOv('ov-grp')">İptal</button>
+      <button class="btn btn-primary" onclick="saveGroup()">Kaydet</button>
+    </div>
+  </div>
+</div>
+
+<!-- TEMPLATE MODAL -->
+<div class="ov" id="ov-tmpl">
+  <div class="modal" style="max-width:580px">
+    <div class="mhdr"><h3 id="tm-title">Yeni Şablon</h3><button class="mclose" onclick="closeOv('ov-tmpl')">×</button></div>
+    <div class="mbdy">
+      <div class="fg"><label>Şablon Adı *</label><input type="text" id="tm-name" placeholder="örn. Şase Kontrol Formu"></div>
+      <div class="fg"><label>Kontrol Grubu *</label><select id="tm-grp"><option value="">— Grup seçin —</option></select></div>
+      <div class="fg"><label>Açıklama</label><input type="text" id="tm-desc" placeholder="opsiyonel"></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:7px">
+        <label style="font-size:.77rem;font-weight:700;color:var(--navy)">Kontrol Maddeleri</label>
+        <div style="display:flex;gap:5px">
+          <button class="btn btn-ghost sm" onclick="addHeading()">+ Başlık</button>
+          <button class="btn btn-primary sm" onclick="addItem()">+ Madde</button>
+        </div>
+      </div>
+      <div id="tm-items" style="max-height:300px;overflow-y:auto;padding-right:2px"></div>
+    </div>
+    <div class="mfoot">
+      <button class="btn btn-ghost" onclick="closeOv('ov-tmpl')">İptal</button>
+      <button class="btn btn-primary" onclick="saveTemplate()">Kaydet</button>
+    </div>
+  </div>
+</div>
+
+<!-- OPERATOR MODAL -->
+<div class="ov" id="ov-op">
+  <div class="modal">
+    <div class="mhdr"><h3 id="om-title">Yeni Operatör</h3><button class="mclose" onclick="closeOv('ov-op')">×</button></div>
+    <div class="mbdy">
+      <div class="fg"><label>Sicil No *</label><input type="text" id="om-sicil" placeholder="00142"></div>
+      <div class="fg"><label>Ad *</label><input type="text" id="om-name"></div>
+      <div class="fg"><label>Soyad *</label><input type="text" id="om-surname"></div>
+    </div>
+    <div class="mfoot">
+      <button class="btn btn-ghost" onclick="closeOv('ov-op')">İptal</button>
+      <button class="btn btn-primary" onclick="saveOperator()">Kaydet</button>
+    </div>
+  </div>
+</div>
+
+<!-- SESSION VIEW MODAL -->
+<div class="ov" id="ov-sess">
+  <div class="modal" style="max-width:660px">
+    <div class="mhdr"><h3 id="sm-title">Kayıt Detayı</h3><button class="mclose" onclick="closeOv('ov-sess')">×</button></div>
+    <div class="mbdy" id="sm-body"></div>
+    <div class="mfoot">
+      <button class="btn btn-ghost" onclick="closeOv('ov-sess')">Kapat</button>
+      <button class="btn btn-amber" id="sm-edit-btn">✏️ Düzenle</button>
+      <button class="btn btn-primary" id="sm-pdf-btn">⬇ PDF</button>
+    </div>
+  </div>
+</div>
+
+<!-- HISTORY MODAL -->
+<div class="ov" id="ov-hist">
+  <div class="modal" style="max-width:540px">
+    <div class="mhdr"><h3 id="hm-title">Versiyon Geçmişi</h3><button class="mclose" onclick="closeOv('ov-hist')">×</button></div>
+    <div class="mbdy" id="hm-body"></div>
+    <div class="mfoot"><button class="btn btn-ghost" onclick="closeOv('ov-hist')">Kapat</button></div>
+  </div>
+</div>
+
+<!-- SCANNER MODAL -->
+<div class="ov" id="ov-scan">
+  <div class="modal" style="max-width:400px">
+    <div class="mhdr"><h3>📷 Barkod Okuyucu</h3><button class="mclose" onclick="closeScanner()">×</button></div>
+    <div id="scan-vp"></div>
+    <div style="padding:10px 14px;background:var(--navy);text-align:center">
+      <div id="scan-res" style="color:#6ee7b7;font-weight:700;font-size:1.05rem;min-height:24px;letter-spacing:1px"></div>
+    </div>
+    <div style="padding:9px;display:flex;gap:7px;justify-content:center;flex-wrap:wrap">
+      <button id="scan-ok" class="btn btn-success sm" onclick="confirmScan()" style="display:none">✅ Onayla</button>
+      <button class="btn btn-ghost sm" onclick="retryScanner()">🔄 Tekrar</button>
+      <button class="btn btn-ghost sm" onclick="closeScanner()">İptal</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ JAVASCRIPT ═══════════════════════ -->
+<script>
+'use strict';
+
+// ─────────────────────────────────────────────
+// SUPABASE
+// ─────────────────────────────────────────────
+const SB = 'https://cpbbnfychuyojvxhtiel.supabase.co';
+const SK = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNwYmJuZnljaHV5b2p2eGh0aWVsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMzMDYzMjgsImV4cCI6MjA4ODg4MjMyOH0.9dpg6BpvAGADZWhivxvJbd2sJUpyj9hgety7BTjHazM';
+
+async function dbReq(method, table, body, qs='') {
+  const r = await fetch(`${SB}/rest/v1/${table}${qs}`, {
+    method,
+    headers: {
+      'apikey': SK, 'Authorization': 'Bearer '+SK,
+      'Content-Type': 'application/json',
+      'Prefer': method==='POST'
+        ? 'resolution=merge-duplicates,return=representation'
+        : 'return=representation'
+    },
+    body: body ? JSON.stringify(body) : undefined
+  });
+  if (!r.ok) throw new Error(`[${r.status}] ${await r.text()}`);
+  const t = await r.text();
+  return t ? JSON.parse(t) : null;
+}
+
+async function dbGetAll(table) {
+  const rows = await dbReq('GET', table, null, '?select=id,data&order=created_at.asc');
+  return (rows || []).map(r => ({ id: r.id, ...r.data }));
+}
+
+async function dbSave(table, id, data) {
+  return dbReq('POST', table, { id, data, updated_at: new Date().toISOString() });
+}
+
+async function dbDel(table, id) {
+  return dbReq('DELETE', table, null, `?id=eq.${encodeURIComponent(id)}`);
+}
+
+// ─────────────────────────────────────────────
+// STATE
+// ─────────────────────────────────────────────
+const D = { groups: [], templates: [], operators: [], sessions: [] };
+
+async function loadAll() {
+  document.getElementById('loader').style.display = 'flex';
+  const [g, t, o, s] = await Promise.all([
+    dbGetAll('groups').catch(e    => { console.error('groups:', e);    return []; }),
+    dbGetAll('templates').catch(e => { console.error('templates:', e); return []; }),
+    dbGetAll('operators').catch(e => { console.error('operators:', e); return []; }),
+    dbGetAll('sessions').catch(e  => { console.error('sessions:', e);  return []; }),
+  ]);
+  D.groups = g; D.templates = t; D.operators = o; D.sessions = s;
+  document.getElementById('loader').style.display = 'none';
+  console.log(`[QC] Yüklendi — groups:${g.length} templates:${t.length} operators:${o.length} sessions:${s.length}`);
+  renderDash();
+}
+
+// ─────────────────────────────────────────────
+// UTILS
+// ─────────────────────────────────────────────
+function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2,6); }
+
+function esc(s) {
+  return String(s||'')
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function fmtDt(ts) {
+  if (!ts) return '—';
+  const d = new Date(typeof ts==='number' ? ts : ts);
+  if (isNaN(d)) return '—';
+  return d.toLocaleString('tr-TR', { day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit' });
+}
+
+let _tt;
+function toast(msg, type='', dur=2800) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.className = 'toast show' + (type ? ' '+type : '');
+  clearTimeout(_tt);
+  _tt = setTimeout(() => el.classList.remove('show'), dur);
+}
+
+// ─────────────────────────────────────────────
+// NAV
+// ─────────────────────────────────────────────
+function goto(pg) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('on'));
+  document.getElementById('pg-'+pg).classList.add('on');
+  document.querySelectorAll('.ntab, #mnav button').forEach(b => b.classList.toggle('on', b.dataset.pg===pg));
+  if (pg==='dash')      renderDash();
+  if (pg==='groups')    renderGroups();
+  if (pg==='templates') renderTemplates();
+  if (pg==='operators') renderOperators();
+  if (pg==='fill')      initFill();
+  if (pg==='sessions')  renderSessions();
+}
+
+function toggleMenu() { document.getElementById('mnav').classList.toggle('open'); }
+function closeMenu()  { document.getElementById('mnav').classList.remove('open'); }
+
+function openOv(id)  { document.getElementById(id).classList.add('open'); }
+function closeOv(id) { document.getElementById(id).classList.remove('open'); }
+
+// ─────────────────────────────────────────────
+// DASHBOARD
+// ─────────────────────────────────────────────
+function renderDash() {
+  const today = new Date(); today.setHours(0,0,0,0);
+  const set = (id, v) => { const el=document.getElementById(id); if(el) el.textContent=v; };
+  set('st-all', D.sessions.length);
+  set('st-fin', D.sessions.filter(s=>s.status==='final').length);
+  set('st-dft', D.sessions.filter(s=>s.status==='draft').length);
+  set('st-tdy', D.sessions.filter(s=>{
+    const d=new Date(s.savedAt||s.startedAt||0); d.setHours(0,0,0,0);
+    return d.getTime()===today.getTime();
+  }).length);
+
+  const recent = [...D.sessions].reverse().slice(0,5);
+  document.getElementById('dash-recent').innerHTML = recent.length
+    ? recent.map(s=>`
+        <div style="padding:5px 0;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;gap:8px">
+          <div>
+            <div style="font-weight:600;font-size:.8rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:150px">${esc(s.templateName)}</div>
+            <div style="font-size:.7rem;color:var(--muted)">${esc(s.chassis||'—')} · ${fmtDt(s.savedAt||s.startedAt)}</div>
+          </div>
+          <span class="badge ${s.status==='final'?'b-final':'b-draft'}">${s.status==='final'?'Kayıtlı':'Taslak'}</span>
+        </div>`).join('')
+    : '<div style="color:var(--muted);font-size:.8rem">Henüz kayıt yok.</div>';
+}
+
+// ─────────────────────────────────────────────
+// GROUPS
+// ─────────────────────────────────────────────
+let _egid = null;
+
+function renderGroups() {
+  const el = document.getElementById('groups-list');
+  if (!D.groups.length) {
+    el.innerHTML = '<div class="empty"><div class="empty-ico">📁</div><p>Henüz grup yok.<br>Yeni Grup butonuyla başlayın.</p></div>';
+    return;
+  }
+  el.innerHTML = D.groups.map(g => `
+    <div class="li">
+      <div class="li-i">
+        <div class="li-n">📁 ${esc(g.name)}</div>
+        <div class="li-m">${esc(g.desc||'')}${g.desc?' · ':''}${D.templates.filter(t=>t.groupId===g.id).length} şablon</div>
+      </div>
+      <div class="li-a">
+        <button class="btn btn-ghost sm" onclick="openGM('${g.id}')">✏️</button>
+        <button class="btn btn-danger sm" onclick="delGroup('${g.id}')">🗑️</button>
+      </div>
+    </div>`).join('');
+}
+
+function openGM(id=null) {
+  _egid = id;
+  document.getElementById('gm-title').textContent = id ? 'Grubu Düzenle' : 'Yeni Grup';
+  document.getElementById('gm-name').value = '';
+  document.getElementById('gm-desc').value = '';
+  if (id) {
+    const g = D.groups.find(x=>x.id===id);
+    if (g) { document.getElementById('gm-name').value=g.name||''; document.getElementById('gm-desc').value=g.desc||''; }
+  }
+  openOv('ov-grp');
+  setTimeout(() => document.getElementById('gm-name').focus(), 60);
+}
+
+function saveGroup() {
+  const name = document.getElementById('gm-name').value.trim();
+  if (!name) { toast('⚠️ Grup adı zorunlu!', 'err'); return; }
+  const desc = document.getElementById('gm-desc').value.trim();
+  if (_egid) {
+    const g = D.groups.find(x=>x.id===_egid);
+    g.name=name; g.desc=desc; g.updatedAt=Date.now();
+    dbSave('groups', g.id, g).catch(e=>toast('Hata: '+e.message,'err'));
+  } else {
+    const g = { id:uid(), name, desc, createdAt:Date.now() };
+    D.groups.push(g);
+    dbSave('groups', g.id, g).catch(e=>toast('Hata: '+e.message,'err'));
+  }
+  closeOv('ov-grp'); renderGroups();
+  toast('✅ Grup kaydedildi', 'ok');
+}
+
+function delGroup(id) {
+  const g = D.groups.find(x=>x.id===id);
+  const cnt = D.templates.filter(t=>t.groupId===id).length;
+  if (!confirm(`"${g.name}" grubunu silmek istiyor musunuz?${cnt?'\n\n⚠️ '+cnt+' şablon gruptan ayrılacak.':''}`)) return;
+  D.templates.filter(t=>t.groupId===id).forEach(t=>{t.groupId=null; dbSave('templates',t.id,t).catch(()=>{});});
+  D.groups = D.groups.filter(x=>x.id!==id);
+  dbDel('groups', id).catch(e=>toast('Hata: '+e.message,'err'));
+  renderGroups(); if(document.getElementById('pg-templates').classList.contains('on')) renderTemplates();
+  toast('🗑️ Grup silindi');
+}
+
+// ─────────────────────────────────────────────
+// TEMPLATES
+// ─────────────────────────────────────────────
+let _etid = null;
+let _topen = {};
+
+function renderTemplates() {
+  const el = document.getElementById('templates-list');
+  _fillGSel('tm-grp', null);
+
+  const groups = D.groups.map(g=>({...g, tmpls: D.templates.filter(t=>t.groupId===g.id)}));
+  const ungrouped = D.templates.filter(t=>!t.groupId);
+  let html = '';
+
+  groups.forEach(g => {
+    const open = _topen[g.id] !== false;
+    html += `<div class="acc-wrap">
+      <div class="acc-hdr" onclick="_topen['${g.id}']=!(_topen['${g.id}']!==false);renderTemplates()">
+        <div style="display:flex;align-items:center;gap:2px">
+          <span class="acc-chev ${open?'open':''}">▶</span>
+          <span style="font-weight:700;font-size:.87rem">📁 ${esc(g.name)}</span>
+          <span style="font-size:.72rem;opacity:.65;margin-left:6px">(${g.tmpls.length})</span>
+        </div>
+        <div style="display:flex;gap:5px" onclick="event.stopPropagation()">
+          <button class="btn btn-ghost sm" style="color:#fff;border-color:rgba(255,255,255,.3)" onclick="openGM('${g.id}')">✏️</button>
+          <button class="btn btn-danger sm" onclick="delGroup('${g.id}')">🗑️</button>
+        </div>
+      </div>
+      <div class="acc-body ${open?'open':''}">
+        ${g.tmpls.length ? g.tmpls.map(t=>_tmplHtml(t)).join('') : '<div style="padding:9px 11px;color:var(--muted);font-size:.81rem">Bu grupta şablon yok.</div>'}
+      </div>
+    </div>`;
+  });
+
+  if (ungrouped.length) {
+    const open = _topen.__none !== false;
+    html += `<div class="acc-wrap">
+      <div class="acc-hdr" onclick="_topen.__none=!(_topen.__none!==false);renderTemplates()">
+        <div style="display:flex;align-items:center;gap:2px">
+          <span class="acc-chev ${open?'open':''}">▶</span>
+          <span style="font-weight:700;font-size:.87rem">📋 Grupsuz Şablonlar</span>
+        </div>
+      </div>
+      <div class="acc-body ${open?'open':''}">${ungrouped.map(t=>_tmplHtml(t)).join('')}</div>
+    </div>`;
+  }
+
+  if (!html) {
+    el.innerHTML = '<div class="empty"><div class="empty-ico">📋</div><p>Önce grup oluşturun, sonra şablon ekleyin.</p></div>';
+    return;
+  }
+  el.innerHTML = html;
+}
+
+function _tmplHtml(t) {
+  const vb = (t.version||1)>1
+    ? `<span style="background:#dbeafe;color:#1e40af;padding:1px 5px;border-radius:8px;font-size:.68rem;font-weight:700">v${t.version}</span>` : '';
+  return `<div class="tmpl-li">
+    <div style="flex:1;min-width:0">
+      <div style="font-weight:700;font-size:.84rem;display:flex;align-items:center;gap:6px">${esc(t.name)} ${vb}</div>
+      <div style="font-size:.72rem;color:var(--muted)">${(t.items||[]).filter(i=>i.type!=='heading').length} madde${t.updatedAt?' · '+fmtDt(t.updatedAt):''}</div>
+    </div>
+    <div style="display:flex;gap:4px">
+      <button class="btn btn-ghost sm" onclick="showHistory('${t.id}')" title="Versiyon geçmişi">🕐</button>
+      <button class="btn btn-ghost sm" onclick="openTM('${t.id}')">✏️</button>
+      <button class="btn btn-danger sm" onclick="delTemplate('${t.id}')">🗑️</button>
+    </div>
+  </div>`;
+}
+
+function _fillGSel(selId, curVal) {
+  const s = document.getElementById(selId); if(!s) return;
+  s.innerHTML = '<option value="">— Grup seçin —</option>' +
+    D.groups.map(g=>`<option value="${g.id}"${g.id===curVal?' selected':''}>${esc(g.name)}</option>`).join('');
+}
+
+function openTM(id=null) {
+  _etid = id;
+  _fillGSel('tm-grp', id?(D.templates.find(x=>x.id===id)||{}).groupId:null);
+  document.getElementById('tm-title').textContent = id ? 'Şablonu Düzenle' : 'Yeni Şablon';
+  document.getElementById('tm-name').value = '';
+  document.getElementById('tm-desc').value = '';
+  document.getElementById('tm-items').innerHTML = '';
+  if (id) {
+    const t = D.templates.find(x=>x.id===id);
+    document.getElementById('tm-name').value  = t.name||'';
+    document.getElementById('tm-desc').value  = t.desc||'';
+    document.getElementById('tm-grp').value   = t.groupId||'';
+    (t.items||[]).forEach(item => item.type==='heading' ? addHeading(item.text,item.id) : addItem(item.text,item.id));
+  }
+  openOv('ov-tmpl');
+}
+
+function addItem(text='', eid=null) {
+  const id = eid||uid();
+  const d = document.createElement('div');
+  d.className='drow'; d.dataset.id=id; d.dataset.type='item';
+  d.innerHTML=`<span class="dhandle" draggable="true">⠿</span>
+    <input type="text" value="${esc(text)}" placeholder="Kontrol maddesi..." style="flex:1;border:none;background:transparent;font-size:.84rem;outline:none;font-family:inherit">
+    <button class="btn btn-danger sm" onclick="this.closest('.drow,.heading').remove()">✕</button>`;
+  document.getElementById('tm-items').appendChild(d);
+  _drag(d); if(!text) d.querySelector('input').focus();
+}
+
+function addHeading(text='', eid=null) {
+  const id = eid||uid();
+  const d = document.createElement('div');
+  d.className='drow heading'; d.dataset.id=id; d.dataset.type='heading';
+  d.innerHTML=`<span class="dhandle" draggable="true">⠿</span>
+    <input type="text" value="${esc(text)}" placeholder="Bölüm başlığı..." style="flex:1;border:none;background:transparent;font-size:.84rem;font-weight:700;color:var(--navy);outline:none;font-family:inherit">
+    <button class="btn btn-danger sm" onclick="this.closest('.drow,.heading').remove()">✕</button>`;
+  document.getElementById('tm-items').appendChild(d);
+  _drag(d); if(!text) d.querySelector('input').focus();
+}
+
+function _drag(el) {
+  const h = el.querySelector('.dhandle');
+  h.addEventListener('dragstart', e => { e.dataTransfer.effectAllowed='move'; el.classList.add('dragging'); window.__drag=el; });
+  h.addEventListener('dragend', ()  => { el.classList.remove('dragging'); window.__drag=null; });
+  el.addEventListener('dragover', e => {
+    e.preventDefault(); if(!window.__drag||window.__drag===el) return;
+    const r=el.getBoundingClientRect();
+    el.parentElement.insertBefore(window.__drag, e.clientY>r.top+r.height/2 ? el.nextSibling : el);
+  });
+}
+
+function saveTemplate() {
+  const name    = document.getElementById('tm-name').value.trim();
+  const groupId = document.getElementById('tm-grp').value;
+  if (!name)    { toast('⚠️ Şablon adı zorunlu!','err'); return; }
+  if (!groupId) { toast('⚠️ Grup seçmelisiniz!','err'); return; }
+
+  const rows = document.querySelectorAll('#tm-items .drow');
+  const items = [];
+  rows.forEach(r => {
+    const v = r.querySelector('input').value.trim();
+    if (v) items.push({ id:r.dataset.id||uid(), type:r.dataset.type||'item', text:v });
+  });
+  if (!items.filter(i=>i.type!=='heading').length) { toast('⚠️ En az bir kontrol maddesi ekleyin!','err'); return; }
+
+  if (_etid) {
+    const t = D.templates.find(x=>x.id===_etid);
+    const changed = JSON.stringify(t.items)!==JSON.stringify(items) || t.name!==name;
+    if (changed) {
+      t.versions = [...(t.versions||[]), {version:t.version||1, savedAt:t.updatedAt||t.createdAt||Date.now(), items:t.items}].slice(-10);
+      t.version  = (t.version||1)+1;
+      t.updatedAt = Date.now();
+    }
+    t.name=name; t.desc=document.getElementById('tm-desc').value.trim(); t.items=items; t.groupId=groupId;
+    dbSave('templates', t.id, t).catch(e=>toast('Hata: '+e.message,'err'));
+  } else {
+    const t = { id:uid(), name, desc:document.getElementById('tm-desc').value.trim(), groupId, items, version:1, versions:[], createdAt:Date.now() };
+    D.templates.push(t);
+    dbSave('templates', t.id, t).catch(e=>toast('Hata: '+e.message,'err'));
+  }
+  closeOv('ov-tmpl'); renderTemplates();
+  toast('✅ Şablon kaydedildi','ok');
+}
+
+function delTemplate(id) {
+  const t   = D.templates.find(x=>x.id===id);
+  const cnt = D.sessions.filter(s=>s.templateId===id).length;
+  if (!confirm(`"${t.name}" şablonunu silmek istiyor musunuz?${cnt?'\n\n⚠️ '+cnt+' kayıtta kullanılmış.':''}`)) return;
+  D.templates = D.templates.filter(x=>x.id!==id);
+  dbDel('templates', id).catch(e=>toast('Hata: '+e.message,'err'));
+  renderTemplates(); toast('🗑️ Şablon silindi');
+}
+
+function showHistory(id) {
+  const t = D.templates.find(x=>x.id===id);
+  const vers = t.versions||[];
+  document.getElementById('hm-title').textContent = `${t.name} — Geçmiş`;
+  document.getElementById('hm-body').innerHTML = !vers.length
+    ? '<p style="color:var(--muted);font-size:.84rem">Henüz versiyon geçmişi yok.</p>'
+    : vers.slice().reverse().map(v=>`
+        <details style="margin-bottom:7px;border:1px solid var(--border);border-radius:8px;overflow:hidden">
+          <summary style="padding:8px 11px;background:var(--bg);cursor:pointer;font-weight:700;font-size:.81rem">v${v.version} — ${fmtDt(v.savedAt)}</summary>
+          <div style="padding:9px 13px;font-size:.8rem;line-height:1.6">
+            ${(v.items||[]).filter(i=>i.type!=='heading').map((i,n)=>`<div>${n+1}. ${esc(i.text)}</div>`).join('')}
+          </div>
+        </details>`).join('');
+  openOv('ov-hist');
+}
+
+// ─────────────────────────────────────────────
+// OPERATORS
+// ─────────────────────────────────────────────
+let _eoid = null;
+
+function renderOperators() {
+  const el = document.getElementById('operators-list');
+  if (!D.operators.length) {
+    el.innerHTML='<div class="empty"><div class="empty-ico">👷</div><p>Henüz operatör yok.</p></div>';
+    return;
+  }
+  const sorted = [...D.operators].sort((a,b)=>(a.sicil||'').localeCompare(b.sicil||''));
+  el.innerHTML = sorted.map(o=>`
+    <div class="li">
+      <div class="li-i">
+        <div class="li-n">[${esc(o.sicil)}] ${esc(o.name)} ${esc(o.surname)}</div>
+        <div class="li-m">Sicil: ${esc(o.sicil)}</div>
+      </div>
+      <div class="li-a">
+        <button class="btn btn-ghost sm" onclick="openOM('${o.id}')">✏️</button>
+        <button class="btn btn-danger sm" onclick="delOperator('${o.id}')">🗑️</button>
+      </div>
+    </div>`).join('');
+}
+
+function openOM(id=null) {
+  _eoid = id;
+  document.getElementById('om-title').textContent = id ? 'Operatör Düzenle' : 'Yeni Operatör';
+  document.getElementById('om-sicil').value   = '';
+  document.getElementById('om-name').value    = '';
+  document.getElementById('om-surname').value = '';
+  if (id) {
+    const o = D.operators.find(x=>x.id===id);
+    if (o) { document.getElementById('om-sicil').value=o.sicil||''; document.getElementById('om-name').value=o.name||''; document.getElementById('om-surname').value=o.surname||''; }
+  }
+  openOv('ov-op');
+  setTimeout(() => document.getElementById('om-sicil').focus(), 60);
+}
+
+function saveOperator() {
+  const sicil   = document.getElementById('om-sicil').value.trim();
+  const name    = document.getElementById('om-name').value.trim();
+  const surname = document.getElementById('om-surname').value.trim();
+  if (!sicil)   { toast('⚠️ Sicil No zorunlu!','err'); return; }
+  if (!name)    { toast('⚠️ Ad zorunlu!','err'); return; }
+  if (!surname) { toast('⚠️ Soyad zorunlu!','err'); return; }
+  if (D.operators.find(o=>o.sicil===sicil&&o.id!==_eoid)) { toast('⚠️ Bu sicil zaten kayıtlı!','err'); return; }
+
+  if (_eoid) {
+    const o = D.operators.find(x=>x.id===_eoid);
+    const changed = o.sicil!==sicil||o.name!==name||o.surname!==surname;
+    o.sicil=sicil; o.name=name; o.surname=surname; o.updatedAt=Date.now();
+    if (changed) {
+      D.sessions.forEach(s=>{
+        const ids = s.operatorIds||(s.operatorId?[s.operatorId]:[]);
+        if (ids.includes(_eoid)) {
+          const ops = ids.map(id=>D.operators.find(x=>x.id===id)).filter(Boolean);
+          s.operator = ops.map(op=>`[${op.sicil}] ${op.name} ${op.surname}`).join(', ');
+          dbSave('sessions',s.id,s).catch(()=>{});
+        }
+      });
+    }
+    dbSave('operators', o.id, o).catch(e=>toast('Hata: '+e.message,'err'));
+  } else {
+    const o = { id:uid(), sicil, name, surname, createdAt:Date.now() };
+    D.operators.push(o);
+    dbSave('operators', o.id, o).catch(e=>toast('Hata: '+e.message,'err'));
+  }
+  closeOv('ov-op'); renderOperators();
+  toast('✅ Operatör kaydedildi','ok');
+}
+
+function delOperator(id) {
+  const o = D.operators.find(x=>x.id===id);
+  const cnt = D.sessions.filter(s=>(s.operatorIds||[s.operatorId]).includes(id)).length;
+  if (!confirm(`"${o.name} ${o.surname}" operatörünü silmek istiyor musunuz?${cnt?'\n\n⚠️ '+cnt+' kayıtta geçiyor.':''}`)) return;
+  D.operators = D.operators.filter(x=>x.id!==id);
+  dbDel('operators', id).catch(e=>toast('Hata: '+e.message,'err'));
+  renderOperators(); toast('🗑️ Operatör silindi');
+}
+
+// ─────────────────────────────────────────────
+// FILL — Operator multi-select
+// ─────────────────────────────────────────────
+let _selOps = [];
+
+function _redrawChips() {
+  const wrap = document.getElementById('chip-wrap');
+  const ph   = document.getElementById('chip-ph');
+  // clear existing chips
+  wrap.querySelectorAll('.chip').forEach(c=>c.remove());
+  if (ph) ph.style.display = _selOps.length ? 'none' : '';
+  _selOps.forEach(id => {
+    const o = D.operators.find(x=>x.id===id); if(!o) return;
+    const sp = document.createElement('span');
+    sp.className = 'chip';
+    sp.innerHTML = `[${esc(o.sicil)}] ${esc(o.name)} ${esc(o.surname)}<button class="chip-rm" onclick="event.stopPropagation();_rmOp('${id}')">×</button>`;
+    wrap.insertBefore(sp, ph);
+  });
+}
+
+function _rmOp(id) { _selOps=_selOps.filter(x=>x!==id); _redrawChips(); _redrawDD(); }
+
+function _redrawDD() {
+  const ul = document.getElementById('op-dd');
+  const sorted = [...D.operators].sort((a,b)=>(a.sicil||'').localeCompare(b.sicil||''));
+  ul.innerHTML = sorted.map(o=>{
+    const sel=_selOps.includes(o.id);
+    return `<li class="${sel?'sel':''}" onclick="_togOp('${o.id}')">[${esc(o.sicil)}] ${esc(o.name)} ${esc(o.surname)}${sel?' ✓':''}</li>`;
+  }).join('') || '<li style="color:var(--muted);pointer-events:none;font-size:.8rem">Operatör bulunamadı</li>';
+}
+
+function _togOp(id) { const i=_selOps.indexOf(id); if(i>=0) _selOps.splice(i,1); else _selOps.push(id); _redrawChips(); _redrawDD(); }
+
+function toggleOpDD() {
+  const dd = document.getElementById('op-dd');
+  const open = dd.style.display==='block';
+  dd.style.display = open?'none':'block';
+  if (!open) _redrawDD();
+}
+
+// ─────────────────────────────────────────────
+// FILL — Form logic
+// ─────────────────────────────────────────────
+let _fillD  = null;
+let _editSid = null;
+let _asTimer = null;
+
+function initFill() {
+  // only reset UI when not coming from editSession
+  _fillGSel('f-grp', null);
+  document.getElementById('f-tmpl').innerHTML = '<option value="">— Önce grup seçin —</option>';
+  document.getElementById('f-tmpl').disabled = true;
+  if (!_editSid) {
+    document.getElementById('f-chassis').value  = '';
+    document.getElementById('f-customer').value = '';
+    document.getElementById('f-order').value    = '';
+    document.getElementById('f-location').value = '';
+    document.getElementById('f-note').value     = '';
+    _selOps = []; _redrawChips();
+  }
+  document.getElementById('fs-select').style.display = '';
+  document.getElementById('fs-form').style.display   = 'none';
+  document.getElementById('fill-banner').style.display = 'none';
+}
+
+function onFGrpChange() {
+  const gId = document.getElementById('f-grp').value;
+  const sel  = document.getElementById('f-tmpl');
+  const tmpls = D.templates.filter(t=>t.groupId===gId);
+  sel.innerHTML = '<option value="">— Şablon seçin —</option>' +
+    tmpls.map(t=>`<option value="${t.id}">${esc(t.name)}</option>`).join('');
+  sel.disabled = !gId;
+}
+
+function startFill() {
+  const tmplId  = document.getElementById('f-tmpl').value;
+  const chassis = document.getElementById('f-chassis').value.trim().toUpperCase();
+  if (!tmplId)         { toast('⚠️ Şablon seçmelisiniz!','err'); return; }
+  if (!_selOps.length) { toast('⚠️ En az bir operatör seçin!','err'); return; }
+  if (!chassis)        { toast('⚠️ Şasi No zorunlu!','err'); document.getElementById('f-chassis').focus(); return; }
+
+  const tmpl    = D.templates.find(x=>x.id===tmplId);
+  const ops     = _selOps.map(id=>D.operators.find(x=>x.id===id)).filter(Boolean);
+  const opLabel = ops.map(o=>`[${o.sicil}] ${o.name} ${o.surname}`).join(', ');
+
+  let prevResp = {};
+  if (_editSid) { const es=D.sessions.find(s=>s.id===_editSid); if(es) prevResp=es.responses||{}; }
+
+  _fillD = {
+    id: _editSid||uid(),
+    templateId: tmpl.id, templateName: tmpl.name,
+    templateVersion: tmpl.version||1,
+    templateSnapshot: JSON.parse(JSON.stringify(tmpl.items||[])),
+    operatorIds: [..._selOps], operatorId: _selOps[0],
+    operator: opLabel,
+    chassis,
+    customer: document.getElementById('f-customer').value.trim(),
+    order:    document.getElementById('f-order').value.trim(),
+    location: document.getElementById('f-location').value.trim(),
+    note:     document.getElementById('f-note').value.trim(),
+    startedAt: _editSid ? (D.sessions.find(s=>s.id===_editSid)||{}).startedAt||Date.now() : Date.now(),
+    status: 'draft',
+    responses: prevResp
+  };
+  _editSid = null;
+
+  document.getElementById('bn-tmpl').textContent = tmpl.name;
+  document.getElementById('bn-op').textContent   = opLabel;
+  document.getElementById('bn-ch').textContent   = chassis;
+  document.getElementById('fill-banner').style.display = '';
+  document.getElementById('fs-select').style.display   = 'none';
+  document.getElementById('fs-form').style.display     = '';
+
+  _buildFillUI();
+  _updProg();
+  _startAS();
+}
+
+function _buildFillUI() {
+  const items = _fillD.templateSnapshot;
+  let n = 0;
+  document.getElementById('fill-items').innerHTML = items.map(item => {
+    if (item.type==='heading') return `<div class="fheading">📌 ${esc(item.text)}</div>`;
+    n++;
+    const r = (_fillD.responses||{})[item.id]||{};
+    const sc = v => r.value===v ? ' r-'+v : '';
+    return `<div class="fitem${r.value?' '+r.value:''}" id="fi-${item.id}">
+      <div class="fitem-hdr">
+        <span class="fitem-n">${n}.</span>
+        <span class="fitem-t">${esc(item.text)}</span>
+      </div>
+      <div class="rg">
+        <label class="ropt${sc('ok')}"  onclick="_pick('${item.id}','ok',this)"><input type="radio" name="r-${item.id}" value="ok"  ${r.value==='ok' ?'checked':''}> ✅ Uygun</label>
+        <label class="ropt${sc('nok')}" onclick="_pick('${item.id}','nok',this)"><input type="radio" name="r-${item.id}" value="nok" ${r.value==='nok'?'checked':''}> ❌ Uygun Değil</label>
+        <label class="ropt${sc('dev')}" onclick="_pick('${item.id}','dev',this)"><input type="radio" name="r-${item.id}" value="dev" ${r.value==='dev'?'checked':''}> ⚠️ Sapmalı</label>
+      </div>
+      <div class="reason" id="rb-${item.id}" style="display:${(r.value==='nok'||r.value==='dev')?'':'none'}">
+        <label>Sebep / Açıklama *</label>
+        <textarea rows="2" id="rs-${item.id}" placeholder="Lütfen açıklayın...">${esc(r.reason||'')}</textarea>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function _pick(itemId, val, lbl) {
+  const card = document.getElementById('fi-'+itemId);
+  card.className = 'fitem '+val;
+  card.querySelectorAll('.ropt').forEach(l=>l.classList.remove('r-ok','r-nok','r-dev'));
+  lbl.classList.add('r-'+val);
+  const rb = document.getElementById('rb-'+itemId);
+  if (rb) rb.style.display = (val==='nok'||val==='dev') ? '' : 'none';
+  _updProg();
+}
+
+function _collect() {
+  if (!_fillD) return {ok:true, all:true};
+  const items = (_fillD.templateSnapshot||[]).filter(i=>i.type!=='heading');
+  let allAns=true, valid=true;
+  items.forEach(item => {
+    const radio  = document.querySelector(`input[name="r-${item.id}"]:checked`);
+    const val    = radio ? radio.value : null;
+    const reason = (document.getElementById('rs-'+item.id)||{}).value?.trim()||'';
+    const card   = document.getElementById('fi-'+item.id);
+    if (!val) { allAns=false; card&&card.classList.add('bad'); }
+    else { card&&card.classList.remove('bad'); }
+    if ((val==='nok'||val==='dev')&&!reason) valid=false;
+    if (val) _fillD.responses[item.id] = {value:val, reason};
+  });
+  return {ok:valid, all:allAns};
+}
+
+function _updProg() {
+  if (!_fillD) return;
+  const items = (_fillD.templateSnapshot||[]).filter(i=>i.type!=='heading');
+  const ans   = items.filter(i=>document.querySelector(`input[name="r-${i.id}"]:checked`)).length;
+  const pct   = items.length ? Math.round(ans/items.length*100) : 0;
+  document.getElementById('pbar').style.width     = pct+'%';
+  document.getElementById('pbar-txt').textContent = `${ans} / ${items.length} (${pct}%)`;
+}
+
+function _write(status) {
+  if (!_fillD) return;
+  _fillD.status=status; _fillD.savedAt=Date.now();
+  const idx = D.sessions.findIndex(s=>s.id===_fillD.id);
+  if (idx>=0) D.sessions[idx]={..._fillD}; else D.sessions.push({..._fillD});
+  dbSave('sessions', _fillD.id, _fillD).catch(e=>toast('Kayıt hatası: '+e.message,'err'));
+}
+
+function _startAS() { _stopAS(); _asTimer=setInterval(()=>{_collect();_write('draft');},30000); }
+function _stopAS()  { clearInterval(_asTimer); _asTimer=null; }
+
+function saveAsFinal() {
+  const {ok, all} = _collect();
+  if (!all) { toast('⚠️ Tüm maddeleri cevaplayın!','err',3500); return; }
+  if (!ok)  { toast('⚠️ Uygun Değil / Sapmalı maddeler için sebep girin!','err',3500); return; }
+  _write('final'); _stopAS();
+  toast('✅ Kaydedildi','ok');
+  setTimeout(()=>{ cancelFill(); goto('sessions'); }, 350);
+}
+
+function saveAsDraft() {
+  _collect(); _write('draft'); _stopAS();
+  toast('📋 Taslağa kaydedildi','ok');
+  setTimeout(()=>{ cancelFill(); goto('sessions'); }, 350);
+}
+
+function saveAndPDF() {
+  const {ok, all} = _collect();
+  if (!all) { toast('⚠️ Tüm maddeleri cevaplayın!','err',3500); return; }
+  if (!ok)  { toast('⚠️ Uygun Değil / Sapmalı maddeler için sebep girin!','err',3500); return; }
+  _write('final'); _stopAS();
+  const sid = _fillD.id;
+  toast('✅ Kaydedildi, PDF açılıyor...','ok');
+  setTimeout(()=>{ cancelFill(); goto('sessions'); downloadPDF(sid); }, 350);
+}
+
+function cancelFill() {
+  _stopAS(); _fillD=null; _editSid=null;
+  _selOps=[]; _redrawChips();
+  document.getElementById('fs-select').style.display = '';
+  document.getElementById('fs-form').style.display   = 'none';
+  document.getElementById('fill-banner').style.display = 'none';
+}
+
+function fillFromSession(tmplId, chassis) {
+  const t = D.templates.find(x=>x.id===tmplId); if(!t) return;
+  goto('fill');
+  setTimeout(()=>{
+    document.getElementById('f-grp').value = t.groupId||'';
+    onFGrpChange();
+    setTimeout(()=>{
+      document.getElementById('f-tmpl').value = tmplId;
+      if(chassis) document.getElementById('f-chassis').value = chassis;
+      toast('✏️ Şablon ve şasi seçildi — bilgileri tamamlayıp Başla\'ya basın','inf',3500);
+    },100);
+  },100);
+}
+
+function editSession(id) {
+  const s = D.sessions.find(x=>x.id===id); if(!s) return;
+  const t = D.templates.find(x=>x.id===s.templateId);
+  if(!t){ toast('⚠️ Şablon bulunamadı','err'); return; }
+  _editSid = id;
+  _selOps  = [...(s.operatorIds||(s.operatorId?[s.operatorId]:[]))];
+  document.getElementById('f-customer').value  = s.customer||'';
+  document.getElementById('f-order').value     = s.order||'';
+  document.getElementById('f-location').value  = s.location||'';
+  document.getElementById('f-note').value      = s.note||'';
+  document.getElementById('f-chassis').value   = s.chassis||'';
+  goto('fill');
+  setTimeout(()=>{
+    document.getElementById('f-grp').value = t.groupId||'';
+    onFGrpChange(); _redrawChips();
+    setTimeout(()=>{ document.getElementById('f-tmpl').value = s.templateId; toast('✏️ Düzenleme modu — Başla\'ya basın','inf',3500); },100);
+  },100);
+}
+
+// ─────────────────────────────────────────────
+// SESSIONS
+// ─────────────────────────────────────────────
+let _sfilt = 'all';
+let _sview = 'grouped';
+let _copen = {};
+
+function setFilt(btn, f) {
+  _sfilt = f;
+  document.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  renderSessions();
+}
+
+function setView(v) {
+  _sview = v;
+  document.getElementById('vbtn-g').classList.toggle('on', v==='grouped');
+  document.getElementById('vbtn-l').classList.toggle('on', v==='list');
+  renderSessions();
+}
+
+function renderSessions() {
+  const el = document.getElementById('sessions-list');
+  const q  = (document.getElementById('srch').value||'').trim().toLowerCase();
+  let all  = [...D.sessions].filter(s=>s&&s.templateName).reverse();
+  if (_sfilt!=='all') all=all.filter(s=>s.status===_sfilt);
+  if (q) all=all.filter(s=>
+    (s.operator||'').toLowerCase().includes(q)||
+    (s.chassis||'').toLowerCase().includes(q)||
+    (s.templateName||'').toLowerCase().includes(q)||
+    (s.customer||'').toLowerCase().includes(q)
+  );
+
+  if (!all.length) {
+    el.innerHTML='<div class="empty"><div class="empty-ico">📂</div><p>'+(q?'Aramanızla eşleşen kayıt yok.':'Henüz kayıt yok.')+'</p></div>';
+    return;
+  }
+
+  // LIST view (or when filtering/searching)
+  if (_sview==='list'||q||_sfilt!=='all') {
+    el.innerHTML = all.map(s=>_sRowHtml(s)).join('');
+    return;
+  }
+
+  // GROUPED view — group by (groupId, chassis)
+  const combos=[]; const seen=new Set();
+  all.forEach(s=>{
+    const t  = D.templates.find(x=>x.id===s.templateId);
+    const gId = t?(t.groupId||'__none__'):'__none__';
+    const ch  = s.chassis||'__';
+    const key = gId+'::'+ch;
+    if (!seen.has(key)) {
+      seen.add(key);
+      const g = gId==='__none__'
+        ? {id:'__none__',name:'Grupsuz'}
+        : (D.groups.find(x=>x.id===gId)||{id:gId,name:'Bilinmeyen Grup'});
+      combos.push({key,gId,g,chassis:s.chassis||null});
+    }
+  });
+
+  el.innerHTML = combos.map(({key,gId,g,chassis})=>{
+    const cSess = all.filter(s=>{
+      const t=D.templates.find(x=>x.id===s.templateId);
+      const sg=t?(t.groupId||'__none__'):'__none__';
+      return sg+'::'+(s.chassis||'__')===key;
+    });
+    const gTmpls = gId==='__none__'
+      ? D.templates.filter(t=>!t.groupId)
+      : D.templates.filter(t=>t.groupId===gId);
+
+    function tStat(tId) {
+      const ss=cSess.filter(s=>s.templateId===tId);
+      if(!ss.length)return'empty';
+      if(ss.every(s=>s.status==='final'))return'ok';
+      return'warn';
+    }
+    const allOk    = gTmpls.length && gTmpls.every(t=>tStat(t.id)==='ok');
+    const anyEmpty = gTmpls.some(t=>tStat(t.id)==='empty');
+    const hCls = allOk?'chdr-ok':anyEmpty?'chdr-warn':'chdr-part';
+    const statBadge = allOk
+      ? '<span class="badge b-final">✅ Tamamlandı</span>'
+      : '<span class="badge b-draft">⚠️ Eksik / Taslak</span>';
+
+    const isOpen = _copen[key]!==false;
+
+    const tmplsHtml = gTmpls.map(t=>{
+      const ts    = tStat(t.id);
+      const tSess = cSess.filter(s=>s.templateId===t.id);
+      const tBadge = ts==='ok'
+        ? '<span class="badge b-final">✅ Tamam</span>'
+        : ts==='warn'
+        ? '<span class="badge b-draft">⚠️ Taslak</span>'
+        : '<span class="badge b-empty">— Boş</span>';
+      const dBtn = ts==='empty'
+        ? `<button class="btn btn-primary sm" onclick="fillFromSession('${t.id}','${esc(chassis||'')}')">+ Doldur</button>` : '';
+      return `<div class="tblock">
+        <div class="tblock-hdr">
+          <span>${esc(t.name)}</span>
+          <div style="display:flex;gap:5px;align-items:center">${tBadge}${dBtn}</div>
+        </div>
+        ${tSess.length?`<div class="tblock-body">${tSess.map(s=>_sRowHtml(s)).join('')}</div>`:''}
+      </div>`;
+    }).join('');
+
+    return `<div class="combo">
+      <div class="combo-hdr ${hCls}" onclick="_copen['${key}']=!(_copen['${key}']!==false);renderSessions()">
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+          <span style="font-size:.76rem">${isOpen?'▾':'▸'}</span>
+          <div>
+            <div style="font-weight:700;font-size:.86rem">📁 ${esc(g.name)}</div>
+            ${chassis?`<div style="font-size:.73rem;opacity:.78">${esc(chassis)}</div>`:''}
+          </div>
+          ${statBadge}
+        </div>
+        <span style="font-size:.72rem;opacity:.65">${gTmpls.length} şablon</span>
+      </div>
+      <div class="combo-body ${isOpen?'open':''}">${tmplsHtml}</div>
+    </div>`;
+  }).join('');
+}
+
+function _sRowHtml(s) {
+  const vb=(s.templateVersion||1)>1
+    ?`<span style="background:#dbeafe;color:#1e40af;padding:1px 5px;border-radius:8px;font-size:.67rem;font-weight:700">v${s.templateVersion}</span>`:'';
+  return `<div class="srow">
+    <div style="flex:1;min-width:0">
+      <div style="font-weight:700;font-size:.81rem;display:flex;align-items:center;gap:5px;flex-wrap:wrap">${esc(s.templateName)} ${vb}</div>
+      <div style="font-size:.71rem;color:var(--muted)">${esc(s.operator)} · ${fmtDt(s.savedAt||s.startedAt)}</div>
+    </div>
+    <div style="display:flex;gap:4px;flex-wrap:wrap;align-items:center">
+      <span class="badge ${s.status==='final'?'b-final':'b-draft'}">${s.status==='final'?'Kayıtlı':'Taslak'}</span>
+      <button class="btn btn-ghost sm" onclick="viewSession('${s.id}')">👁</button>
+      <button class="btn btn-amber sm"  onclick="editSession('${s.id}')">✏️</button>
+      <button class="btn btn-primary sm" onclick="downloadPDF('${s.id}')">⬇</button>
+      <button class="btn btn-danger sm" onclick="delSession('${s.id}')">🗑️</button>
+    </div>
+  </div>`;
+}
+
+function viewSession(id) {
+  const s = D.sessions.find(x=>x.id===id); if(!s) return;
+  const items = s.templateSnapshot||(D.templates.find(x=>x.id===s.templateId)||{}).items||[];
+  document.getElementById('sm-title').textContent = s.templateName||'Kayıt';
+  const lm = {ok:'✅ Uygun', nok:'❌ Uygun Değil', dev:'⚠️ Sapmalı Uygun'};
+  let n=0;
+  const rows=items.map(item=>{
+    if(item.type==='heading')return`<tr class="tbl-sec"><td colspan="4">📌 ${esc(item.text)}</td></tr>`;
+    n++;const r=(s.responses||{})[item.id]||{};
+    return`<tr><td>${n}</td><td>${esc(item.text)}</td><td>${lm[r.value]||'—'}</td><td>${r.reason?esc(r.reason):'—'}</td></tr>`;
+  }).join('');
+  const stBg=s.status==='final'?'#d1fae5':'#fef3c7', stC=s.status==='final'?'#065f46':'#92400e';
+  document.getElementById('sm-body').innerHTML=`
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px 14px;background:#f5f7fc;border-radius:8px;padding:11px;margin-bottom:12px;font-size:.8rem">
+      <div><b>Operatör:</b> ${esc(s.operator)}</div>
+      <div><b>Şasi:</b> ${esc(s.chassis||'—')}</div>
+      <div><b>Müşteri:</b> ${esc(s.customer||'—')}</div>
+      <div><b>Sipariş:</b> ${esc(s.order||'—')}</div>
+      <div><b>İstasyon:</b> ${esc(s.location||'—')}</div>
+      <div><b>Tarih:</b> ${fmtDt(s.savedAt||s.startedAt)}</div>
+      <div><b>Durum:</b> <span style="background:${stBg};color:${stC};padding:1px 7px;border-radius:4px;font-weight:700;font-size:.73rem">${s.status==='final'?'Kayıtlı':'Taslak'}</span></div>
+      ${s.note?`<div style="grid-column:1/-1"><b>Not:</b> ${esc(s.note)}</div>`:''}
+    </div>
+    <table class="ptbl">
+      <thead><tr><th>#</th><th>Madde</th><th>Sonuç</th><th>Açıklama</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>`;
+  document.getElementById('sm-edit-btn').onclick = ()=>{ closeOv('ov-sess'); editSession(id); };
+  document.getElementById('sm-pdf-btn').onclick  = ()=>{ downloadPDF(id); closeOv('ov-sess'); };
+  openOv('ov-sess');
+}
+
+function delSession(id) {
+  if (!confirm('Bu kaydı silmek istiyor musunuz?')) return;
+  D.sessions = D.sessions.filter(s=>s.id!==id);
+  dbDel('sessions', id).catch(e=>toast('Hata: '+e.message,'err'));
+  renderSessions(); renderDash();
+  toast('🗑️ Kayıt silindi');
+}
+
+// ─────────────────────────────────────────────
+// PDF
+// ─────────────────────────────────────────────
+function downloadPDF(id) {
+  const s = D.sessions.find(x=>x.id===id);
+  if (!s) { toast('⚠️ Kayıt bulunamadı','err'); return; }
+  const items = s.templateSnapshot||(D.templates.find(x=>x.id===s.templateId)||{}).items||[];
+  const stLbl = s.status==='final'?'Kayıtlı':'Taslak';
+  const stBg  = s.status==='final'?'#d1fae5':'#fef3c7';
+  const stC   = s.status==='final'?'#065f46':'#92400e';
+  const lm    = {
+    ok:  {t:'Uygun',         c:'#065f46',b:'#d1fae5'},
+    nok: {t:'Uygun Değil',   c:'#991b1b',b:'#fee2e2'},
+    dev: {t:'Sapmalı Uygun', c:'#92400e',b:'#fef3c7'}
+  };
+  const mr=(lbl,val)=>`<div style="display:flex;gap:4px;font-size:11px"><span style="font-weight:700;min-width:82px;color:#374151">${lbl}:</span><span>${esc(val||'—')}</span></div>`;
+  let n=0;
+  const rows=items.map(item=>{
+    if(item.type==='heading')return`<tr><td colspan="4" style="background:linear-gradient(135deg,#0c1e4a,#1a3272);color:#fff;font-weight:700;padding:6px 9px;font-size:11px">📌 ${esc(item.text)}</td></tr>`;
+    n++;const r=(s.responses||{})[item.id]||{};const lv=lm[r.value]||{t:'—',c:'#6b7280',b:'#f3f4f6'};
+    return`<tr style="background:${n%2?'#fff':'#f8fafc'}">
+      <td style="padding:5px 7px;border:1px solid #dce4f5;text-align:center;color:#64748b;font-size:11px">${n}</td>
+      <td style="padding:5px 7px;border:1px solid #dce4f5;font-size:11px">${esc(item.text)}</td>
+      <td style="padding:5px 7px;border:1px solid #dce4f5;text-align:center"><span style="background:${lv.b};color:${lv.c};padding:1px 6px;border-radius:4px;font-size:10px;font-weight:700">${lv.t}</span></td>
+      <td style="padding:5px 7px;border:1px solid #dce4f5;font-size:11px">${r.reason?esc(r.reason):'—'}</td>
+    </tr>`;
+  }).join('');
+
+  const html=`<!DOCTYPE html><html lang="tr"><head><meta charset="UTF-8">
+<title>${slugify(s.chassis||'NoSasi')}_${slugify(s.templateName||'Belge')}</title>
+<style>
+@page{size:A4;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif}
+.hdr{background:#0c1e4a;color:#fff;padding:13px 18px 11px}
+.acc{height:3px;background:#1d4ed8}
+.meta{margin:10px 14mm;background:#f5f7fc;border:1px solid #d0d9ee;border-radius:6px;padding:10px 13px;display:grid;grid-template-columns:1fr 1fr;gap:5px 16px}
+.tbl{margin:9px 14mm 0}
+table{width:100%;border-collapse:collapse}
+thead tr{background:#0c1e4a;color:#fff}
+thead th{padding:6px 7px;font-size:11px;text-align:left;border:1px solid #091840}
+.ftr{position:fixed;bottom:0;left:0;right:0;height:9mm;background:#0c1e4a;color:rgba(255,255,255,.58);display:flex;align-items:center;justify-content:space-between;padding:0 18px;font-size:9px}
+tr{page-break-inside:avoid}
+@media print{.nop{display:none}}
+</style></head><body>
+<div class="hdr">
+  <div style="font-size:14px;font-weight:800">KALİTE KONTROL BELGESİ</div>
+  <div style="font-size:11px;opacity:.8;margin-top:2px">${esc(s.templateName)}${s.templateVersion?' · v'+s.templateVersion:''}</div>
+  <div style="font-size:10px;opacity:.55;margin-top:1px">${fmtDt(s.savedAt||s.startedAt)}</div>
+</div>
+<div class="acc"></div>
+<div class="meta">
+  ${mr('Operatör',s.operator)}${mr('Şasi No',s.chassis)}
+  ${mr('Müşteri',s.customer)}${mr('Sipariş No',s.order)}
+  ${mr('İstasyon',s.location)}
+  <div style="display:flex;gap:4px;font-size:11px">
+    <span style="font-weight:700;min-width:82px;color:#374151">Durum:</span>
+    <span style="background:${stBg};color:${stC};padding:1px 7px;border-radius:4px;font-weight:700;font-size:10px">${stLbl}</span>
+  </div>
+  ${s.note?'<div style="grid-column:1/-1">'+mr('Not',s.note)+'</div>':''}
+</div>
+<div class="tbl">
+  <table>
+    <thead><tr>
+      <th style="width:26px;text-align:center">#</th>
+      <th>Kontrol Maddesi</th>
+      <th style="width:96px;text-align:center">Sonuç</th>
+      <th style="width:86px">Açıklama</th>
+    </tr></thead>
+    <tbody>${rows}</tbody>
+  </table>
+</div>
+<div class="ftr">
+  <span>Kalite Kontrol Sistemi — Koluman Otomotiv Endüstri A.Ş.</span>
+  <span>${esc(s.operator)} · ${esc(s.chassis||'')}</span>
+</div>
+<div class="nop" style="position:fixed;top:10px;right:10px">
+  <button onclick="window.print()" style="background:#0c1e4a;color:#fff;border:none;padding:8px 16px;border-radius:6px;cursor:pointer;font-size:13px">🖨️ PDF Kaydet</button>
+</div>
+<script>window.onload=function(){window.print()};<\/script>
+</body></html>`;
+
+  // Dosya adı: [Şasi]_[ŞablonAdı].html  (geçersiz karakterler temizlenir)
+  function slugify(str) {
+    return String(str||'').trim()
+      .replace(/[\s/\\:*?"<>|]+/g,'_')
+      .replace(/_+/g,'_')
+      .replace(/^_|_$/g,'')
+      .substring(0,80) || 'belge';
+  }
+  const fileName = slugify(s.chassis||'NoSasi') + '_' + slugify(s.templateName||'Belge') + '.html';
+
+  const blob = new Blob([html], {type:'text/html;charset=utf-8'});
+  const url  = URL.createObjectURL(blob);
+
+  // Önce print penceresini aç (PDF olarak kaydetmek için)
+  const win = window.open(url, '_blank');
+  if (!win) {
+    // Pop-up engellenirse doğrudan indir
+    const a = document.createElement('a');
+    a.href = url; a.download = fileName; a.click();
+    setTimeout(()=>URL.revokeObjectURL(url), 10000);
+    toast('⬇ Dosya indiriliyor: '+fileName,'ok');
+    return;
+  }
+  // Tarayıcı "Farklı Kaydet" yaparken önerilen adı ayarla
+  try { win.document.title = fileName.replace('.html',''); } catch(e){}
+  setTimeout(()=>URL.revokeObjectURL(url), 60000);
+  toast('📄 PDF penceresi açıldı — Kaydet\'e basarken dosya adını kontrol edin','ok',4000);
+}
+
+// ─────────────────────────────────────────────
+// SCANNER
+// ─────────────────────────────────────────────
+function openScanner() {
+  openOv('ov-scan');
+  document.getElementById('scan-res').textContent = '';
+  document.getElementById('scan-ok').style.display = 'none';
+  if (typeof Quagga==='undefined') { toast('⚠️ Barkod kütüphanesi yüklenemedi','err'); return; }
+  Quagga.init({
+    inputStream: {
+      name: 'Live', type: 'LiveStream',
+      target: document.getElementById('scan-vp'),
+      constraints: { facingMode: 'environment' }
+    },
+    decoder: { readers: ['code_128_reader','ean_reader','ean_8_reader','code_39_reader','upc_reader'] }
+  }, err => {
+    if (err) { toast('⚠️ Kamera açılamadı: '+(err.message||err),'err'); closeScanner(); return; }
+    Quagga.start();
+  });
+  Quagga.onDetected(data => {
+    const code = data.codeResult.code;
+    document.getElementById('scan-res').textContent = code;
+    document.getElementById('scan-ok').style.display = '';
+    try{Quagga.offDetected();}catch(e){}
+  });
+}
+
+function closeScanner() {
+  closeOv('ov-scan');
+  if (typeof Quagga!=='undefined') {
+    try{Quagga.stop();}catch(e){}
+    try{Quagga.offDetected();}catch(e){}
+  }
+}
+
+function confirmScan() {
+  const code = document.getElementById('scan-res').textContent;
+  if (code) {
+    document.getElementById('f-chassis').value = code.toUpperCase();
+    toast('✅ Barkod okundu: '+code,'ok');
+  }
+  closeScanner();
+}
+
+function retryScanner() {
+  document.getElementById('scan-res').textContent = '';
+  document.getElementById('scan-ok').style.display = 'none';
+  if (typeof Quagga!=='undefined') {
+    try{Quagga.offDetected();}catch(e){}
+    Quagga.onDetected(data=>{
+      const code=data.codeResult.code;
+      document.getElementById('scan-res').textContent=code;
+      document.getElementById('scan-ok').style.display='';
+      try{Quagga.offDetected();}catch(e){}
+    });
+  }
+}
+
+// ─────────────────────────────────────────────
+// INIT
+// ─────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Overlay → close on background click
+  document.querySelectorAll('.ov').forEach(ov=>{
+    ov.addEventListener('click', e=>{ if(e.target===ov) ov.classList.remove('open'); });
+  });
+
+  // Operator dropdown → close on outside click
+  document.addEventListener('click', e=>{
+    const wrap  = document.getElementById('op-dd-wrap');
+    const chips = document.getElementById('chip-wrap');
+    const dd    = document.getElementById('op-dd');
+    if (!wrap||!dd) return;
+    if (!wrap.contains(e.target) && !chips.contains(e.target)) {
+      dd.style.display = 'none';
+    }
+  });
+
+  // Mobile nav → close on outside click
+  document.addEventListener('click', e=>{
+    const nav = document.getElementById('mnav');
+    const btn = document.getElementById('hmbg-btn');
+    if (nav&&nav.classList.contains('open')&&!nav.contains(e.target)&&!btn.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
+  // Enter keys on modals
+  const enter = (id, fn) => {
+    const el=document.getElementById(id);
+    if(el) el.addEventListener('keydown',e=>{ if(e.key==='Enter') fn(); });
+  };
+  enter('gm-name', saveGroup);
+  enter('om-sicil', ()=>document.getElementById('om-name').focus());
+  enter('om-name',  ()=>document.getElementById('om-surname').focus());
+  enter('om-surname', saveOperator);
+
+  loadAll();
+});
+</script>
+</body>
+</html>
