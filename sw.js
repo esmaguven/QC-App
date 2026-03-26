@@ -5,19 +5,20 @@
 const CACHE_NAME = 'kalite-kontrol-v1';
 
 // Cache'lenecek dosyalar (app shell)
+// Cache'lenecek dosyalar (app shell)
 const SHELL = [
-  '/',
-  '/index.html',
-  '/css/style.css',
-  '/js/config.js',
-  '/js/utils.js',
-  '/js/db.js',
-  '/js/auth.js',
-  '/js/app.js',
-  '/js/modules/admin.js',
-  '/js/modules/form-fill.js',
-  '/js/modules/sessions.js',
-  '/js/modules/analiz.js',
+  './',
+  './index.html',
+  './css/style.css',
+  './js/config.js',
+  './js/utils.js',
+  './js/db.js',
+  './js/auth.js',
+  './js/app.js',
+  './js/modules/admin.js',
+  './js/modules/form-fill.js',
+  './js/modules/sessions.js',
+  './js/modules/analiz.js',
   'https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js'
 ];
 
