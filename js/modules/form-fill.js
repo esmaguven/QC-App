@@ -12,7 +12,7 @@ function _redrawChips() {
     const o = D.operators.find(x=>x.id===id); if(!o) return;
     const sp = document.createElement('span');
     sp.className = 'chip';
-    sp.innerHTML = `[${esc(o.sicil)}] ${esc(o.name)} ${esc(o.surname)}<button class="chip-rm" onclick="event.stopPropagation();_rmOp('${id}')">×</button>`;
+    sp.innerHTML = `[${esc(o.sicil)}] ${esc(o.name)} ${esc(o.surname)}<button class="chip-rm" onclick="event.stopPropagation();_rmOp('${id}')"><span class="material-symbols-rounded" style="font-size:14px">close</span></button>`;
     wrap.insertBefore(sp, ph);
   });
 }
@@ -24,7 +24,7 @@ function _redrawDD() {
   const sorted = [...D.operators].sort((a,b)=>(a.sicil||'').localeCompare(b.sicil||''));
   ul.innerHTML = sorted.map(o=>{
     const sel=_selOps.includes(o.id);
-    return `<li class="${sel?'sel':''}" onclick="_togOp('${o.id}')">[${esc(o.sicil)}] ${esc(o.name)} ${esc(o.surname)}${sel?' ✓':''}</li>`;
+    return `<li class="${sel?'sel':''}" onclick="_togOp('${o.id}')">[${esc(o.sicil)}] ${esc(o.name)} ${esc(o.surname)}${sel?' <span class="material-symbols-rounded" style="font-size:16px;vertical-align:middle;margin-left:4px">check</span>':''}</li>`;
   }).join('') || '<li style="color:var(--muted);pointer-events:none;font-size:.8rem">Operatör bulunamadı</li>';
 }
 
@@ -140,23 +140,23 @@ function _buildFillUI() {
 
   if (_fillD.refImage) {
     html += '<div class="fill-sec" style="text-align:center">' +
-      '<div style="font-weight:700;font-size:.83rem;color:var(--navy);margin-bottom:8px">📎 Referans Fotoğraf</div>' +
+      '<div style="font-weight:700;font-size:.83rem;color:var(--navy);margin-bottom:8px;display:flex;align-items:center;justify-content:center;gap:4px"><span class="material-symbols-rounded">attach_file</span> Referans Fotoğraf</div>' +
       '<img src="'+_fillD.refImage+'" style="max-width:100%;max-height:280px;border-radius:8px;border:1px solid var(--border);object-fit:contain">' +
       '</div>';
   }
 
   let n = 0;
   html += items.map(item => {
-    if (item.type==='heading') return '<div class="fheading">📌 '+esc(item.text)+'</div>';
+    if (item.type==='heading') return '<div class="fheading" style="display:flex;align-items:center;gap:6px"><span class="material-symbols-rounded" style="color:var(--primary)">push_pin</span> '+esc(item.text)+'</div>';
     n++;
     const r = (_fillD.responses||{})[item.id]||{};
     const sc = v => r.value===v ? ' r-'+v : '';
     return '<div class="fitem'+(r.value?' '+r.value:'')+'" id="fi-'+item.id+'">' +
       '<div class="fitem-hdr"><span class="fitem-n">'+n+'.</span><span class="fitem-t">'+esc(item.text)+'</span></div>' +
       '<div class="rg">' +
-        '<label class="ropt'+sc('ok')+'" onclick="_pick(\''+item.id+'\',\'ok\',this)"><input type="radio" name="r-'+item.id+'" value="ok" '+(r.value==='ok'?'checked':'')+' > ✅ Uygun</label>' +
-        '<label class="ropt'+sc('nok')+'" onclick="_pick(\''+item.id+'\',\'nok\',this)"><input type="radio" name="r-'+item.id+'" value="nok" '+(r.value==='nok'?'checked':'')+' > ❌ Uygun Değil</label>' +
-        '<label class="ropt'+sc('dev')+'" onclick="_pick(\''+item.id+'\',\'dev\',this)"><input type="radio" name="r-'+item.id+'" value="dev" '+(r.value==='dev'?'checked':'')+' > ⚠️ Sapmalı</label>' +
+        '<label class="ropt'+sc('ok')+'" onclick="_pick(\''+item.id+'\',\'ok\',this)"><input type="radio" name="r-'+item.id+'" value="ok" '+(r.value==='ok'?'checked':'')+' > <span class="material-symbols-rounded">check_circle</span> Uygun</label>' +
+        '<label class="ropt'+sc('nok')+'" onclick="_pick(\''+item.id+'\',\'nok\',this)"><input type="radio" name="r-'+item.id+'" value="nok" '+(r.value==='nok'?'checked':'')+' > <span class="material-symbols-rounded">cancel</span> Uygun Değil</label>' +
+        '<label class="ropt'+sc('dev')+'" onclick="_pick(\''+item.id+'\',\'dev\',this)"><input type="radio" name="r-'+item.id+'" value="dev" '+(r.value==='dev'?'checked':'')+' > <span class="material-symbols-rounded">warning</span> Sapmalı</label>' +
       '</div>' +
       '<div class="reason" id="rb-'+item.id+'" style="display:'+((r.value==='nok'||r.value==='dev')?'':'none')+'">' +
         '<label>Sebep / Açıklama *</label>' +
@@ -164,20 +164,20 @@ function _buildFillUI() {
       '</div></div>';
   }).join('');
 
-  const okSty  = prevFS==='ok'  ? 'background:#d1fae5;border-color:#16a34a;color:#065f46;' : '';
-  const nokSty = prevFS==='nok' ? 'background:#fee2e2;border-color:#dc2626;color:#991b1b;' : '';
-  html += '<div class="fill-sec" style="border:2px solid var(--border);border-radius:10px;padding:14px;background:#f8fafc;margin-top:4px">' +
-    '<div style="font-weight:800;font-size:.9rem;color:var(--navy);margin-bottom:12px">📋 Kabul Durumu</div>' +
+  const okSty  = prevFS==='ok'  ? 'background:var(--success-bg);border-color:var(--success);color:#065f46;' : '';
+  const nokSty = prevFS==='nok' ? 'background:var(--danger-bg);border-color:var(--danger);color:#991b1b;' : '';
+  html += '<div class="fill-sec" style="border:2px solid var(--border);border-radius:10px;padding:14px;background:var(--surface);margin-top:4px">' +
+    '<div style="font-weight:800;font-size:.9rem;color:var(--navy);margin-bottom:12px;display:flex;align-items:center;gap:6px"><span class="material-symbols-rounded">assignment_turned_in</span> Kabul Durumu</div>' +
     '<div style="display:flex;gap:10px;margin-bottom:14px">' +
       '<label id="fs-ok-lbl" style="display:flex;align-items:center;gap:8px;padding:10px 20px;border:2px solid var(--border);border-radius:9px;cursor:pointer;flex:1;font-size:.9rem;font-weight:700;transition:all .15s;'+okSty+'">' +
-        '<input type="radio" name="final-status" value="ok" '+(prevFS==='ok'?'checked':'')+' onchange="_onFinalStatus()" style="accent-color:#16a34a;width:16px;height:16px"> ✅ OK — Kabul' +
+        '<input type="radio" name="final-status" value="ok" '+(prevFS==='ok'?'checked':'')+' onchange="_onFinalStatus()" style="accent-color:var(--success);width:16px;height:16px"> <span class="material-symbols-rounded">check_circle</span> OK — Kabul' +
       '</label>' +
       '<label id="fs-nok-lbl" style="display:flex;align-items:center;gap:8px;padding:10px 20px;border:2px solid var(--border);border-radius:9px;cursor:pointer;flex:1;font-size:.9rem;font-weight:700;transition:all .15s;'+nokSty+'">' +
-        '<input type="radio" name="final-status" value="nok" '+(prevFS==='nok'?'checked':'')+' onchange="_onFinalStatus()" style="accent-color:#dc2626;width:16px;height:16px"> ❌ NOK — Red' +
+        '<input type="radio" name="final-status" value="nok" '+(prevFS==='nok'?'checked':'')+' onchange="_onFinalStatus()" style="accent-color:var(--danger);width:16px;height:16px"> <span class="material-symbols-rounded">cancel</span> NOK — Red' +
       '</label>' +
     '</div>' +
     '<div class="fg" style="margin-bottom:0">' +
-      '<label>📝 Genel Not <span style="font-weight:400;color:var(--muted)">(opsiyonel)</span></label>' +
+      '<label style="display:flex;align-items:center;gap:4px"><span class="material-symbols-rounded" style="font-size:16px">notes</span> Genel Not <span style="font-weight:400;color:var(--muted)">(opsiyonel)</span></label>' +
       '<textarea id="std-form-note" rows="3" placeholder="Genel not ekleyin..." style="width:100%;padding:8px 10px;border:1.5px solid var(--border);border-radius:7px;font-size:.84rem;font-family:inherit;resize:vertical;box-sizing:border-box">'+esc(prevNote)+'</textarea>' +
     '</div>' +
   '</div>';
@@ -190,13 +190,13 @@ function _onFinalStatus() {
   const okLbl  = document.getElementById('fs-ok-lbl');
   const nokLbl = document.getElementById('fs-nok-lbl');
   if (okLbl) {
-    okLbl.style.background  = val==='ok'  ? '#d1fae5' : '';
-    okLbl.style.borderColor = val==='ok'  ? '#16a34a' : 'var(--border)';
+    okLbl.style.background  = val==='ok'  ? 'var(--success-bg)' : '';
+    okLbl.style.borderColor = val==='ok'  ? 'var(--success)' : 'var(--border)';
     okLbl.style.color       = val==='ok'  ? '#065f46' : '';
   }
   if (nokLbl) {
-    nokLbl.style.background  = val==='nok' ? '#fee2e2' : '';
-    nokLbl.style.borderColor = val==='nok' ? '#dc2626' : 'var(--border)';
+    nokLbl.style.background  = val==='nok' ? 'var(--danger-bg)' : '';
+    nokLbl.style.borderColor = val==='nok' ? 'var(--danger)' : 'var(--border)';
     nokLbl.style.color       = val==='nok' ? '#991b1b' : '';
   }
 }
@@ -207,11 +207,11 @@ function _buildMeasFillUI() {
   const toolSN  = _fillD.toolSN || '';
   const formNote = _fillD.formNote || '';
 
-  let html = '<div class="fill-sec" style="background:#eef3ff;border-color:#c7d6f5">' +
+  let html = '<div class="fill-sec" style="background:var(--primary-soft);border-color:var(--border)">' +
     '<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px 14px;font-size:.82rem">' +
-    '<div><span style="font-weight:700;color:var(--navy)">Resim No:</span> <span style="color:#374151">'+esc(_fillD.drawNo||'—')+'</span></div>' +
-    '<div><span style="font-weight:700;color:var(--navy)">Tolerans Std:</span> <span style="color:#374151">'+esc(_fillD.tolStd||'—')+'</span></div>' +
-    '<div><span style="font-weight:700;color:var(--navy)">Tarih:</span> <span style="color:#374151">'+new Date().toLocaleDateString('tr-TR')+'</span></div>' +
+    '<div><span style="font-weight:700;color:var(--navy)">Resim No:</span> <span style="color:var(--text)">'+esc(_fillD.drawNo||'—')+'</span></div>' +
+    '<div><span style="font-weight:700;color:var(--navy)">Tolerans Std:</span> <span style="color:var(--text)">'+esc(_fillD.tolStd||'—')+'</span></div>' +
+    '<div><span style="font-weight:700;color:var(--navy)">Tarih:</span> <span style="color:var(--text)">'+new Date().toLocaleDateString('tr-TR')+'</span></div>' +
     '</div></div>';
 
   html += '<div class="fill-sec">' +
@@ -222,13 +222,13 @@ function _buildMeasFillUI() {
 
   if (_fillD.refImage) {
     html += '<div class="fill-sec" style="text-align:center">' +
-      '<div style="font-weight:700;font-size:.83rem;color:var(--navy);margin-bottom:8px">📐 Referans Resim / Çizim</div>' +
+      '<div style="font-weight:700;font-size:.83rem;color:var(--navy);margin-bottom:8px;display:flex;align-items:center;justify-content:center;gap:4px"><span class="material-symbols-rounded">architecture</span> Referans Resim / Çizim</div>' +
       '<img src="'+_fillD.refImage+'" style="max-width:100%;max-height:300px;border-radius:8px;border:1px solid var(--border);object-fit:contain">' +
       '</div>';
   }
 
   html += '<div class="fill-sec">' +
-    '<div style="font-weight:700;font-size:.86rem;color:var(--navy);margin-bottom:10px">📏 Ölçüm Tablosu</div>' +
+    '<div style="font-weight:700;font-size:.86rem;color:var(--navy);margin-bottom:10px;display:flex;align-items:center;gap:6px"><span class="material-symbols-rounded">straighten</span> Ölçüm Tablosu</div>' +
     '<div style="overflow-x:auto">' +
     '<table style="width:100%;border-collapse:collapse;font-size:.8rem">' +
     '<thead><tr style="background:var(--navy);color:#fff">' +
@@ -256,10 +256,10 @@ function _buildMeasFillUI() {
       '</td>' +
       '<td style="padding:4px 6px;text-align:center">' +
         '<div style="display:flex;gap:4px;justify-content:center">' +
-          '<label style="display:flex;align-items:center;gap:3px;padding:4px 9px;border-radius:5px;border:1.5px solid var(--border);cursor:pointer;font-size:.75rem;font-weight:700;'+(r.result==='ok'?'background:#d1fae5;border-color:#16a34a;color:#065f46':'')+'">' +
-            '<input type="radio" name="mr-'+row.id+'" value="ok" '+(r.result==='ok'?'checked':'')+' onchange="_onMeasResult(\''+row.id+'\')"> ✅ K</label>' +
-          '<label style="display:flex;align-items:center;gap:3px;padding:4px 9px;border-radius:5px;border:1.5px solid var(--border);cursor:pointer;font-size:.75rem;font-weight:700;'+(r.result==='nok'?'background:#fee2e2;border-color:#dc2626;color:#991b1b':'')+'">' +
-            '<input type="radio" name="mr-'+row.id+'" value="nok" '+(r.result==='nok'?'checked':'')+' onchange="_onMeasResult(\''+row.id+'\')"> ❌ R</label>' +
+          '<label style="display:flex;align-items:center;gap:3px;padding:4px 9px;border-radius:5px;border:1.5px solid var(--border);cursor:pointer;font-size:.75rem;font-weight:700;'+(r.result==='ok'?'background:var(--success-bg);border-color:var(--success);color:#065f46':'')+'">' +
+            '<input type="radio" name="mr-'+row.id+'" value="ok" '+(r.result==='ok'?'checked':'')+' onchange="_onMeasResult(\''+row.id+'\')"> K</label>' +
+          '<label style="display:flex;align-items:center;gap:3px;padding:4px 9px;border-radius:5px;border:1.5px solid var(--border);cursor:pointer;font-size:.75rem;font-weight:700;'+(r.result==='nok'?'background:var(--danger-bg);border-color:var(--danger);color:#991b1b':'')+'">' +
+            '<input type="radio" name="mr-'+row.id+'" value="nok" '+(r.result==='nok'?'checked':'')+' onchange="_onMeasResult(\''+row.id+'\')"> R</label>' +
         '</div>' +
       '</td>' +
     '</tr>';
@@ -269,7 +269,7 @@ function _buildMeasFillUI() {
 
   html += '<div class="fill-sec">' +
     '<div class="fg" style="margin-bottom:0">' +
-    '<label>📝 Genel Not (opsiyonel)</label>' +
+    '<label style="display:flex;align-items:center;gap:4px"><span class="material-symbols-rounded" style="font-size:16px">notes</span> Genel Not (opsiyonel)</label>' +
     '<textarea id="meas-form-note" rows="3" placeholder="Forma genel not ekleyin..." style="width:100%;padding:8px 10px;border:1.5px solid var(--border);border-radius:7px;font-size:.84rem;font-family:inherit;resize:vertical;box-sizing:border-box">'+esc(formNote)+'</textarea>' +
     '</div></div>';
 
@@ -305,8 +305,8 @@ function _highlightMeasRow(rowId, result) {
     const lbl = document.querySelector('input[name="mr-'+rowId+'"][value="'+v+'"]')?.closest('label');
     if (!lbl) return;
     if (result === v) {
-      lbl.style.background = v==='ok'?'#d1fae5':'#fee2e2';
-      lbl.style.borderColor = v==='ok'?'#16a34a':'#dc2626';
+      lbl.style.background = v==='ok'?'var(--success-bg)':'var(--danger-bg)';
+      lbl.style.borderColor = v==='ok'?'var(--success)':'var(--danger)';
       lbl.style.color = v==='ok'?'#065f46':'#991b1b';
     } else {
       lbl.style.background=''; lbl.style.borderColor='var(--border)'; lbl.style.color='';
