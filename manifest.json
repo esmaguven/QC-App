@@ -1,0 +1,9 @@
+{
+  "name": "Kalite Kontrol Sistemi",
+  "short_name": "QC App",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#818cf8",
+  "icons": []
+}
