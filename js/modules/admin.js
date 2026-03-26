@@ -6,18 +6,18 @@ let _egid = null;
 function renderGroups() {
   const el = document.getElementById('groups-list');
   if (!D.groups.length) {
-    el.innerHTML = '<div class="empty"><div class="empty-ico">📁</div><p>Henüz grup yok.<br>Yeni Grup butonuyla başlayın.</p></div>';
+    el.innerHTML = '<div class="empty"><div class="empty-ico"><span class="material-symbols-rounded" style="font-size:48px;color:var(--muted)">folder_off</span></div><p>Henüz grup yok.<br>Yeni Grup butonuyla başlayın.</p></div>';
     return;
   }
   el.innerHTML = D.groups.map(g => `
     <div class="li">
       <div class="li-i">
-        <div class="li-n">📁 ${esc(g.name)}</div>
+        <div class="li-n"><span class="material-symbols-rounded" style="color:var(--primary)">folder_open</span> ${esc(g.name)}</div>
         <div class="li-m">${esc(g.desc||'')}${g.desc?' · ':''}${D.templates.filter(t=>t.groupId===g.id).length} şablon</div>
       </div>
       <div class="li-a">
-        <button class="btn btn-ghost sm" onclick="openGM('${g.id}')">✏️</button>
-        <button class="btn btn-danger sm" onclick="delGroup('${g.id}')">🗑️</button>
+        <button class="btn btn-ghost sm" onclick="openGM('${g.id}')" title="Düzenle"><span class="material-symbols-rounded" style="font-size:20px">edit</span></button>
+        <button class="btn btn-danger sm" onclick="delGroup('${g.id}')" title="Sil"><span class="material-symbols-rounded" style="font-size:20px">delete</span></button>
       </div>
     </div>`).join('');
 }
@@ -81,14 +81,16 @@ function renderTemplates() {
     const open = _topen[g.id] !== false;
     html += `<div class="acc-wrap">
       <div class="acc-hdr" onclick="_topen['${g.id}']=!(_topen['${g.id}']!==false);renderTemplates()">
-        <div style="display:flex;align-items:center;gap:2px">
-          <span class="acc-chev ${open?'open':''}">▶</span>
-          <span style="font-weight:700;font-size:.87rem">📁 ${esc(g.name)}</span>
+        <div style="display:flex;align-items:center;gap:6px">
+          <span class="acc-chev material-symbols-rounded ${open?'open':''}">chevron_right</span>
+          <span style="font-weight:700;font-size:.87rem;display:flex;align-items:center;gap:4px">
+            <span class="material-symbols-rounded" style="color:var(--primary);font-size:18px">folder</span> ${esc(g.name)}
+          </span>
           <span style="font-size:.72rem;opacity:.65;margin-left:6px">(${g.tmpls.length})</span>
         </div>
         <div style="display:flex;gap:5px" onclick="event.stopPropagation()">
-          <button class="btn btn-ghost sm" style="color:#fff;border-color:rgba(255,255,255,.3)" onclick="openGM('${g.id}')">✏️</button>
-          <button class="btn btn-danger sm" onclick="delGroup('${g.id}')">🗑️</button>
+          <button class="btn btn-ghost sm" style="color:var(--muted)" onclick="openGM('${g.id}')"><span class="material-symbols-rounded" style="font-size:18px">edit</span></button>
+          <button class="btn btn-danger sm" onclick="delGroup('${g.id}')"><span class="material-symbols-rounded" style="font-size:18px">delete</span></button>
         </div>
       </div>
       <div class="acc-body ${open?'open':''}">
@@ -101,9 +103,11 @@ function renderTemplates() {
     const open = _topen.__none !== false;
     html += `<div class="acc-wrap">
       <div class="acc-hdr" onclick="_topen.__none=!(_topen.__none!==false);renderTemplates()">
-        <div style="display:flex;align-items:center;gap:2px">
-          <span class="acc-chev ${open?'open':''}">▶</span>
-          <span style="font-weight:700;font-size:.87rem">📋 Grupsuz Formlar</span>
+        <div style="display:flex;align-items:center;gap:6px">
+          <span class="acc-chev material-symbols-rounded ${open?'open':''}">chevron_right</span>
+          <span style="font-weight:700;font-size:.87rem;display:flex;align-items:center;gap:4px">
+            <span class="material-symbols-rounded" style="color:var(--muted);font-size:18px">assignment</span> Grupsuz Formlar
+          </span>
         </div>
       </div>
       <div class="acc-body ${open?'open':''}">${ungrouped.map(t=>_tmplHtml(t)).join('')}</div>
@@ -111,7 +115,7 @@ function renderTemplates() {
   }
 
   if (!html) {
-    el.innerHTML = '<div class="empty"><div class="empty-ico">📋</div><p>Önce grup oluşturun, sonra form ekleyin.</p></div>';
+    el.innerHTML = '<div class="empty"><div class="empty-ico"><span class="material-symbols-rounded" style="font-size:48px;color:var(--muted)">assignment_late</span></div><p>Önce grup oluşturun, sonra form ekleyin.</p></div>';
     return;
   }
   el.innerHTML = html;
@@ -119,24 +123,24 @@ function renderTemplates() {
 
 function _tmplHtml(t) {
   const vb = (t.version||1)>1
-    ? '<span style="background:#dbeafe;color:#1e40af;padding:1px 5px;border-radius:8px;font-size:.68rem;font-weight:700">v'+t.version+'</span>' : '';
+    ? '<span style="background:var(--primary-soft);color:var(--primary);padding:1px 5px;border-radius:6px;font-size:.68rem;font-weight:700">v'+t.version+'</span>' : '';
   const ftBadge = t.formType==='measurement'
-    ? '<span style="background:#f0fdf4;color:#065f46;padding:1px 6px;border-radius:8px;font-size:.67rem;font-weight:700;border:1px solid #bbf7d0">📐 Ölçüm</span>'
-    : '<span style="background:#eff6ff;color:#1e40af;padding:1px 6px;border-radius:8px;font-size:.67rem;font-weight:700;border:1px solid #bfdbfe">📋 Standart</span>';
+    ? '<span style="background:var(--success-bg);color:var(--success);padding:1px 6px;border-radius:6px;font-size:.67rem;font-weight:700;border:1px solid #bbf7d0;display:flex;align-items:center;gap:2px"><span class="material-symbols-rounded" style="font-size:14px">architecture</span> Ölçüm</span>'
+    : '<span style="background:var(--primary-soft);color:var(--primary);padding:1px 6px;border-radius:6px;font-size:.67rem;font-weight:700;border:1px solid #bfdbfe;display:flex;align-items:center;gap:2px"><span class="material-symbols-rounded" style="font-size:14px">assignment</span> Standart</span>';
   const itemCnt = t.formType==='measurement'
     ? (t.measRows||[]).length+' ölçüm noktası'
     : (t.items||[]).filter(i=>i.type!=='heading').length+' madde';
   return '<div class="tmpl-li">' +
     '<div style="flex:1;min-width:0">' +
       '<div style="font-weight:700;font-size:.84rem;display:flex;align-items:center;gap:6px;flex-wrap:wrap">'+esc(t.name)+' '+vb+' '+ftBadge+'</div>' +
-      '<div style="font-size:.72rem;color:var(--muted)">'+itemCnt+(t.updatedAt?' · '+fmtDt(t.updatedAt):'')+
+      '<div style="font-size:.72rem;color:var(--muted);margin-top:2px">'+itemCnt+(t.updatedAt?' · '+fmtDt(t.updatedAt):'')+
         (t.drawNo?' · Res: '+esc(t.drawNo):'')+
       '</div>' +
     '</div>' +
     '<div style="display:flex;gap:4px">' +
-      '<button class="btn btn-ghost sm" onclick="showHistory(\''+t.id+'\')" title="Versiyon geçmişi">🕐</button>' +
-      '<button class="btn btn-ghost sm" onclick="openTM(\''+t.id+'\')">✏️</button>' +
-      '<button class="btn btn-danger sm" onclick="delTemplate(\''+t.id+'\')">🗑️</button>' +
+      '<button class="btn btn-ghost sm" onclick="showHistory(\''+t.id+'\')" title="Versiyon geçmişi"><span class="material-symbols-rounded" style="font-size:18px">history</span></button>' +
+      '<button class="btn btn-ghost sm" onclick="openTM(\''+t.id+'\')" title="Düzenle"><span class="material-symbols-rounded" style="font-size:18px">edit</span></button>' +
+      '<button class="btn btn-danger sm" onclick="delTemplate(\''+t.id+'\')" title="Sil"><span class="material-symbols-rounded" style="font-size:18px">delete</span></button>' +
     '</div></div>';
 }
 
@@ -150,8 +154,8 @@ function _onFTypeChange() {
   const isMeas = document.getElementById('ftype-meas').checked;
   document.getElementById('tm-std-section').style.display  = isMeas ? 'none' : '';
   document.getElementById('tm-meas-section').style.display = isMeas ? ''     : 'none';
-  document.getElementById('ftype-std-lbl').style.borderColor  = isMeas ? 'var(--border)' : 'var(--navy)';
-  document.getElementById('ftype-meas-lbl').style.borderColor = isMeas ? 'var(--navy)'   : 'var(--border)';
+  document.getElementById('ftype-std-lbl').style.borderColor  = isMeas ? 'var(--border)' : 'var(--primary)';
+  document.getElementById('ftype-meas-lbl').style.borderColor = isMeas ? 'var(--primary)'   : 'var(--border)';
 }
 
 let _tmImgData = null;
@@ -224,7 +228,7 @@ function addMeasRow(data=null) {
     ' style="padding:5px 6px;border:1.5px solid #4ade80;border-radius:6px;font-size:.8rem;font-family:inherit;text-align:center;width:100%;box-sizing:border-box;background:#f0fdf4">' +
     '<input type="number" value="' + tolVal + '" placeholder="0.50" data-field="tol" step="0.001" min="0"' +
     ' style="padding:5px 6px;border:1.5px solid #fbbf24;border-radius:6px;font-size:.8rem;font-family:inherit;text-align:center;width:100%;box-sizing:border-box;background:#fffbeb">' +
-    '<button onclick="this.parentElement.remove()" style="background:none;border:none;color:#dc2626;cursor:pointer;font-size:1rem;padding:2px">✕</button>';
+    '<button onclick="this.parentElement.remove()" style="background:none;border:none;color:var(--danger);cursor:pointer;padding:2px;display:flex;align-items:center;justify-content:center"><span class="material-symbols-rounded" style="font-size:20px">close</span></button>';
   document.getElementById('tm-meas-rows').appendChild(d);
 }
 
@@ -301,9 +305,9 @@ function addItem(text='', eid=null) {
   const id = eid||uid();
   const d = document.createElement('div');
   d.className='drow'; d.dataset.id=id; d.dataset.type='item';
-  d.innerHTML='<span class="dhandle" draggable="true">⠿</span>' +
+  d.innerHTML='<span class="dhandle material-symbols-rounded" draggable="true" style="color:var(--muted);cursor:grab">drag_indicator</span>' +
     '<input type="text" value="' + esc(text) + '" placeholder="Kontrol maddesi..." style="flex:1;border:none;background:transparent;font-size:.84rem;outline:none;font-family:inherit">' +
-    '<button class="btn btn-danger sm" onclick="this.closest(\'.drow,.heading\').remove()">✕</button>';
+    '<button class="btn btn-danger sm" onclick="this.closest(\'.drow,.heading\').remove()" style="display:flex;align-items:center"><span class="material-symbols-rounded" style="font-size:16px">close</span></button>';
   document.getElementById('tm-items').appendChild(d);
   _drag(d); if(!text) d.querySelector('input').focus();
 }
@@ -312,9 +316,9 @@ function addHeading(text='', eid=null) {
   const id = eid||uid();
   const d = document.createElement('div');
   d.className='drow heading'; d.dataset.id=id; d.dataset.type='heading';
-  d.innerHTML='<span class="dhandle" draggable="true">⠿</span>' +
-    '<input type="text" value="' + esc(text) + '" placeholder="Bölüm başlığı..." style="flex:1;border:none;background:transparent;font-size:.84rem;font-weight:700;color:var(--navy);outline:none;font-family:inherit">' +
-    '<button class="btn btn-danger sm" onclick="this.closest(\'.drow,.heading\').remove()">✕</button>';
+  d.innerHTML='<span class="dhandle material-symbols-rounded" draggable="true" style="color:var(--muted);cursor:grab">drag_indicator</span>' +
+    '<input type="text" value="' + esc(text) + '" placeholder="Bölüm başlığı..." style="flex:1;border:none;background:transparent;font-size:.84rem;font-weight:700;color:var(--primary);outline:none;font-family:inherit">' +
+    '<button class="btn btn-danger sm" onclick="this.closest(\'.drow,.heading\').remove()" style="display:flex;align-items:center"><span class="material-symbols-rounded" style="font-size:16px">close</span></button>';
   document.getElementById('tm-items').appendChild(d);
   _drag(d); if(!text) d.querySelector('input').focus();
 }
@@ -398,7 +402,7 @@ function showHistory(id) {
   const vers = t.versions||[];
   document.getElementById('hm-title').textContent = t.name + ' — Geçmiş';
   document.getElementById('hm-body').innerHTML = !vers.length
-    ? '<p style="color:var(--muted);font-size:.84rem">Henüz versiyon geçmişi yok.</p>'
+    ? '<p style="color:var(--muted);font-size:.84rem;display:flex;align-items:center;gap:4px"><span class="material-symbols-rounded">history</span> Henüz versiyon geçmişi yok.</p>'
     : vers.slice().reverse().map(v =>
         '<details style="margin-bottom:7px;border:1px solid var(--border);border-radius:8px;overflow:hidden">' +
         '<summary style="padding:8px 11px;background:var(--bg);cursor:pointer;font-weight:700;font-size:.81rem">v' + v.version + ' — ' + fmtDt(v.savedAt) + '</summary>' +
@@ -418,20 +422,20 @@ let _eoid = null;
 function renderOperators() {
   const el = document.getElementById('operators-list');
   if (!D.operators.length) {
-    el.innerHTML='<div class="empty"><div class="empty-ico">👷</div><p>Henüz operatör yok.</p></div>';
+    el.innerHTML='<div class="empty"><div class="empty-ico"><span class="material-symbols-rounded" style="font-size:48px;color:var(--muted)">engineering</span></div><p>Henüz operatör yok.</p></div>';
     return;
   }
   const sorted = [...D.operators].sort((a,b)=>(a.sicil||'').localeCompare(b.sicil||''));
   el.innerHTML = sorted.map(o=>`
     <div class="li">
       <div class="li-i">
-        <div class="li-n">[${esc(o.sicil)}] ${esc(o.name)} ${esc(o.surname)}</div>
-        <div class="li-m">Sicil: ${esc(o.sicil)} ${o.password_hash ? '🔑 Şifre var' : '⚠️ Şifre yok'}</div>
+        <div class="li-n"><span class="material-symbols-rounded" style="color:var(--primary);font-size:18px">person</span> [${esc(o.sicil)}] ${esc(o.name)} ${esc(o.surname)}</div>
+        <div class="li-m" style="display:flex;align-items:center;gap:4px">Sicil: ${esc(o.sicil)} ${o.password_hash ? '<span style="color:var(--success);display:flex;align-items:center;gap:2px"><span class="material-symbols-rounded" style="font-size:14px">lock</span> Şifre var</span>' : '<span style="color:var(--warning);display:flex;align-items:center;gap:2px"><span class="material-symbols-rounded" style="font-size:14px">no_encryption</span> Şifre yok</span>'}</div>
       </div>
       <div class="li-a">
-        <button class="btn btn-ghost sm" onclick="openSetPass('${o.id}')" title="Şifre Belirle">🔑</button>
-        <button class="btn btn-ghost sm" onclick="openOM('${o.id}')">✏️</button>
-        <button class="btn btn-danger sm" onclick="delOperator('${o.id}')">🗑️</button>
+        <button class="btn btn-ghost sm" onclick="openSetPass('${o.id}')" title="Şifre Belirle"><span class="material-symbols-rounded" style="font-size:20px">key</span></button>
+        <button class="btn btn-ghost sm" onclick="openOM('${o.id}')" title="Düzenle"><span class="material-symbols-rounded" style="font-size:20px">edit</span></button>
+        <button class="btn btn-danger sm" onclick="delOperator('${o.id}')" title="Sil"><span class="material-symbols-rounded" style="font-size:20px">delete</span></button>
       </div>
     </div>`).join('');
 }
