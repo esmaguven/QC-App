@@ -1,4 +1,4 @@
-﻿// ─────────────────────────────────────────────
+// ─────────────────────────────────────────────
 // FILL — Operator multi-select
 // ─────────────────────────────────────────────
 let _selOps = [];
@@ -154,9 +154,9 @@ function _buildFillUI() {
     return '<div class="fitem'+(r.value?' '+r.value:'')+'" id="fi-'+item.id+'">' +
       '<div class="fitem-hdr"><span class="fitem-n">'+n+'.</span><span class="fitem-t">'+esc(item.text)+'</span></div>' +
       '<div class="rg">' +
-        '<label class="ropt'+sc('ok')+'" onclick="_pick(''+item.id+'','ok',this)"><input type="radio" name="r-'+item.id+'" value="ok" '+(r.value==='ok'?'checked':'')+' > ✅ Uygun</label>' +
-        '<label class="ropt'+sc('nok')+'" onclick="_pick(''+item.id+'','nok',this)"><input type="radio" name="r-'+item.id+'" value="nok" '+(r.value==='nok'?'checked':'')+' > ❌ Uygun Değil</label>' +
-        '<label class="ropt'+sc('dev')+'" onclick="_pick(''+item.id+'','dev',this)"><input type="radio" name="r-'+item.id+'" value="dev" '+(r.value==='dev'?'checked':'')+' > ⚠️ Sapmalı</label>' +
+        '<label class="ropt'+sc('ok')+'" onclick="_pick(\''+item.id+'\',\'ok\',this)"><input type="radio" name="r-'+item.id+'" value="ok" '+(r.value==='ok'?'checked':'')+' > ✅ Uygun</label>' +
+        '<label class="ropt'+sc('nok')+'" onclick="_pick(\''+item.id+'\',\'nok\',this)"><input type="radio" name="r-'+item.id+'" value="nok" '+(r.value==='nok'?'checked':'')+' > ❌ Uygun Değil</label>' +
+        '<label class="ropt'+sc('dev')+'" onclick="_pick(\''+item.id+'\',\'dev\',this)"><input type="radio" name="r-'+item.id+'" value="dev" '+(r.value==='dev'?'checked':'')+' > ⚠️ Sapmalı</label>' +
       '</div>' +
       '<div class="reason" id="rb-'+item.id+'" style="display:'+((r.value==='nok'||r.value==='dev')?'':'none')+'">' +
         '<label>Sebep / Açıklama *</label>' +
@@ -250,15 +250,15 @@ function _buildMeasFillUI() {
       '<td style="padding:6px 8px;text-align:center;font-weight:700;color:#92400e;background:#fffbeb">'+(row.tol!=null?('±'+row.tol):'—')+'</td>' +
       '<td style="padding:6px 8px;text-align:center;font-size:.75rem;color:var(--muted)">'+(row.min!=null&&row.max!=null?(row.min+' / '+row.max):'—')+'</td>' +
       '<td style="padding:4px 6px;text-align:center">' +
-        '<input type="number" step="0.01" id="mv-'+row.id+'" value="'+(r.measured!=null?r.measured:'')+'\"' +
+        '<input type="number" step="0.01" id="mv-'+row.id+'" value="'+(r.measured!=null?r.measured:'')+'"' +
         ' onchange="_measAutoResult(\''+row.id+'\','+row.min+','+row.max+')" ' +
         ' style="width:84px;padding:4px 6px;border:1.5px solid var(--border);border-radius:6px;font-size:.82rem;text-align:center;font-family:inherit">' +
       '</td>' +
       '<td style="padding:4px 6px;text-align:center">' +
         '<div style="display:flex;gap:4px;justify-content:center">' +
-          '<label style="display:flex;align-items:center;gap:3px;padding:4px 9px;border-radius:5px;border:1.5px solid var(--border);cursor:pointer;font-size:.75rem;font-weight:700;'+(r.result==='ok'?'background:#d1fae5;border-color:#16a34a;color:#065f46':'')+'\">' +
+          '<label style="display:flex;align-items:center;gap:3px;padding:4px 9px;border-radius:5px;border:1.5px solid var(--border);cursor:pointer;font-size:.75rem;font-weight:700;'+(r.result==='ok'?'background:#d1fae5;border-color:#16a34a;color:#065f46':'')+'">' +
             '<input type="radio" name="mr-'+row.id+'" value="ok" '+(r.result==='ok'?'checked':'')+' onchange="_onMeasResult(\''+row.id+'\')"> ✅ K</label>' +
-          '<label style="display:flex;align-items:center;gap:3px;padding:4px 9px;border-radius:5px;border:1.5px solid var(--border);cursor:pointer;font-size:.75rem;font-weight:700;'+(r.result==='nok'?'background:#fee2e2;border-color:#dc2626;color:#991b1b':'')+'\">' +
+          '<label style="display:flex;align-items:center;gap:3px;padding:4px 9px;border-radius:5px;border:1.5px solid var(--border);cursor:pointer;font-size:.75rem;font-weight:700;'+(r.result==='nok'?'background:#fee2e2;border-color:#dc2626;color:#991b1b':'')+'">' +
             '<input type="radio" name="mr-'+row.id+'" value="nok" '+(r.result==='nok'?'checked':'')+' onchange="_onMeasResult(\''+row.id+'\')"> ❌ R</label>' +
         '</div>' +
       '</td>' +
@@ -459,7 +459,7 @@ function fillFromSession(tmplId, chassis) {
     setTimeout(()=>{
       document.getElementById('f-tmpl').value = tmplId;
       if(chassis) document.getElementById('f-chassis').value = chassis;
-      toast('✏️ Form ve şasi seçildi — bilgileri tamamlayıp Başla\'ya basın','inf',3500);
+      toast("✏️ Form ve şasi seçildi — bilgileri tamamlayıp Başla'ya basın",'inf',3500);
     },100);
   },100);
 }
@@ -479,6 +479,6 @@ function editSession(id) {
   setTimeout(()=>{
     document.getElementById('f-grp').value = t.groupId||'';
     onFGrpChange(); _redrawChips();
-    setTimeout(()=>{ document.getElementById('f-tmpl').value = s.templateId; toast('✏️ Düzenleme modu — Başla\'ya basın','inf',3500); },100);
+    setTimeout(()=>{ document.getElementById('f-tmpl').value = s.templateId; toast("✏️ Düzenleme modu — Başla'ya basın",'inf',3500); },100);
   },100);
 }
