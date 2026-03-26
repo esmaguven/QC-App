@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Service Worker kaydı (PWA offline desteği)
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js').then(reg => {
+    navigator.serviceWorker.register('./sw.js').then(reg => {
       console.log('[QC] Service Worker kayıtlı:', reg.scope);
     }).catch(e => console.warn('[QC] SW kayıt hatası:', e));
 
