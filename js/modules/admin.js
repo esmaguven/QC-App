@@ -1,4 +1,4 @@
-﻿// ─────────────────────────────────────────────
+// ─────────────────────────────────────────────
 // GROUPS
 // ─────────────────────────────────────────────
 let _egid = null;
@@ -134,9 +134,9 @@ function _tmplHtml(t) {
       '</div>' +
     '</div>' +
     '<div style="display:flex;gap:4px">' +
-      '<button class="btn btn-ghost sm" onclick="showHistory(''+t.id+'')" title="Versiyon geçmişi">🕐</button>' +
-      '<button class="btn btn-ghost sm" onclick="openTM(''+t.id+'')">✏️</button>' +
-      '<button class="btn btn-danger sm" onclick="delTemplate(''+t.id+'')">🗑️</button>' +
+      '<button class="btn btn-ghost sm" onclick="showHistory(\''+t.id+'\')" title="Versiyon geçmişi">🕐</button>' +
+      '<button class="btn btn-ghost sm" onclick="openTM(\''+t.id+'\')">✏️</button>' +
+      '<button class="btn btn-danger sm" onclick="delTemplate(\''+t.id+'\')">🗑️</button>' +
     '</div></div>';
 }
 
@@ -158,7 +158,7 @@ let _tmImgData = null;
 
 function _onImgFile(input) {
   const file = input.files[0]; if (!file) return;
-  if (file.size > 3*1024*1024) { toast('⚠️ Dosya 3MB'dan büyük olamaz','err'); return; }
+  if (file.size > 3*1024*1024) { toast("⚠️ Dosya 3MB'dan büyük olamaz",'err'); return; }
   const reader = new FileReader();
   reader.onload = e => { _setImgPreview(e.target.result); };
   reader.readAsDataURL(file);
@@ -168,8 +168,8 @@ function _onImgDrop(event) {
   event.preventDefault();
   event.currentTarget.style.borderColor = 'var(--border)';
   const file = event.dataTransfer.files[0]; if (!file) return;
-  if (!file.type.startsWith('image/') && file.type !== 'application/pdf') { toast('⚠️ Sadece resim veya PDF','err'); return; }
-  if (file.size > 3*1024*1024) { toast('⚠️ Dosya 3MB'dan büyük olamaz','err'); return; }
+  if (!file.type.startsWith('image/') && file.type !== 'application/pdf') { toast("⚠️ Sadece resim veya PDF",'err'); return; }
+  if (file.size > 3*1024*1024) { toast("⚠️ Dosya 3MB'dan büyük olamaz",'err'); return; }
   const reader = new FileReader();
   reader.onload = e => { _setImgPreview(e.target.result); };
   reader.readAsDataURL(file);
@@ -303,7 +303,7 @@ function addItem(text='', eid=null) {
   d.className='drow'; d.dataset.id=id; d.dataset.type='item';
   d.innerHTML='<span class="dhandle" draggable="true">⠿</span>' +
     '<input type="text" value="' + esc(text) + '" placeholder="Kontrol maddesi..." style="flex:1;border:none;background:transparent;font-size:.84rem;outline:none;font-family:inherit">' +
-    '<button class="btn btn-danger sm" onclick="this.closest('.drow,.heading').remove()">✕</button>';
+    '<button class="btn btn-danger sm" onclick="this.closest(\'.drow,.heading\').remove()">✕</button>';
   document.getElementById('tm-items').appendChild(d);
   _drag(d); if(!text) d.querySelector('input').focus();
 }
@@ -314,7 +314,7 @@ function addHeading(text='', eid=null) {
   d.className='drow heading'; d.dataset.id=id; d.dataset.type='heading';
   d.innerHTML='<span class="dhandle" draggable="true">⠿</span>' +
     '<input type="text" value="' + esc(text) + '" placeholder="Bölüm başlığı..." style="flex:1;border:none;background:transparent;font-size:.84rem;font-weight:700;color:var(--navy);outline:none;font-family:inherit">' +
-    '<button class="btn btn-danger sm" onclick="this.closest('.drow,.heading').remove()">✕</button>';
+    '<button class="btn btn-danger sm" onclick="this.closest(\'.drow,.heading\').remove()">✕</button>';
   document.getElementById('tm-items').appendChild(d);
   _drag(d); if(!text) d.querySelector('input').focus();
 }
