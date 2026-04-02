@@ -1,0 +1,35 @@
+.root {
+  --color-primary: #3498db; /* Blue */
+  --color-secondary: #2ecc71; /* Green */
+  --color-accent: #e74c3c; /* Red */
+  --color-background: #ffffff; /* White */
+  --color-text: #333333; /* Dark Grey */
+
+  /* Typography */
+  --font-family-sans: 'Helvetica Neue', Arial, sans-serif;
+  --font-family-serif: 'Georgia', serif;
+  --font-size-small: 12px;
+  --font-size-medium: 16px;
+  --font-size-large: 20px;
+  --line-height: 1.5;
+
+  /* Spacing */
+  --spacing-xxs: 4px;
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 40px;
+
+  /* Components */
+  --border-radius-small: 4px;
+  --border-radius-medium: 8px;
+  --border-radius-large: 16px;
+  --box-shadow-light: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --box-shadow-medium: 0 2px 5px rgba(0, 0, 0, 0.15);
+
+  /* Accessibility */
+  --focus-outline-color: #3498db;
+  --focus-outline-width: 2px;
+}
