@@ -44,18 +44,8 @@ let _fillD  = null;
 let _editSid = null;
 let _asTimer = null;
 
-// Grup select'i D.groups'tan doldurur; prevId varsa seçili bırakır
-function _fillGSel(elId, prevId) {
-  const sel = document.getElementById(elId);
-  if (!sel) return;
-  sel.innerHTML = '<option value="">— Grup seçin —</option>' +
-    D.groups.map(g =>
-      `<option value="${g.id}"${g.id === prevId ? ' selected' : ''}>${esc(g.name)}</option>`
-    ).join('');
-}
-
 function initFill() {
-  _fillGSel('f-grp', null);          // Grup listesini D.groups'tan doldur
+  _fillGSel('f-grp', null);
   document.getElementById('f-tmpl').innerHTML = '<option value="">— Önce grup seçin —</option>';
   document.getElementById('f-tmpl').disabled = true;
   if (!_editSid) {
@@ -164,7 +154,7 @@ function _buildFillUI() {
     return '<div class="fitem'+(r.value?' '+r.value:'')+'" id="fi-'+item.id+'">' +
       '<div class="fitem-hdr"><span class="fitem-n">'+n+'.</span><span class="fitem-t">'+esc(item.text)+'</span></div>' +
       '<div class="rg">' +
-        '<label class="ropt'+sc('nok')+'" onclick="_pick(\''+item.id+'\',\'nok\',this)"><input type="radio" name="r-'+item.id+'" value="nok" '+(r.value==='nok'?'checked':'')+' > ❌ Uygun Değil</label>' +
+        '<label class="ropt'+sc('ok')+'" onclick="_pick(\''+item.id+'\',\'ok\',this)"><input type="radio" name="r-'+item.id+'" value="ok" '+(r.value==='ok'?'checked':'')+' > ✅ Uygun</label>' +
         '<label class="ropt'+sc('nok')+'" onclick="_pick(\''+item.id+'\',\'nok\',this)"><input type="radio" name="r-'+item.id+'" value="nok" '+(r.value==='nok'?'checked':'')+' > ❌ Uygun Değil</label>' +
         '<label class="ropt'+sc('dev')+'" onclick="_pick(\''+item.id+'\',\'dev\',this)"><input type="radio" name="r-'+item.id+'" value="dev" '+(r.value==='dev'?'checked':'')+' > ⚠️ Sapmalı</label>' +
       '</div>' +
@@ -464,7 +454,7 @@ function fillFromSession(tmplId, chassis) {
   const t = D.templates.find(x=>x.id===tmplId); if(!t) return;
   goto('fill');
   setTimeout(()=>{
-    _fillGSel('f-grp', t.groupId||'');   // Grubu doldur ve seç
+    document.getElementById('f-grp').value = t.groupId||'';
     onFGrpChange();
     setTimeout(()=>{
       document.getElementById('f-tmpl').value = tmplId;
@@ -487,7 +477,7 @@ function editSession(id) {
   document.getElementById('f-chassis').value   = s.chassis||'';
   goto('fill');
   setTimeout(()=>{
-    _fillGSel('f-grp', t.groupId||'');   // Grubu doldur ve seç
+    document.getElementById('f-grp').value = t.groupId||'';
     onFGrpChange(); _redrawChips();
     setTimeout(()=>{ document.getElementById('f-tmpl').value = s.templateId; toast('✏️ Düzenleme modu — Başla\'ya basın','inf',3500); },100);
   },100);
